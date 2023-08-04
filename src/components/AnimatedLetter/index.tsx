@@ -30,9 +30,7 @@ export default function AnimatedLetter({ letter }: AnimatedLetterProps) {
     <motion.span
       className="inline-block px-1 font-bold"
       animate={controls}
-      onMouseOver={() => {
-        rubberBandEffect();
-      }}
+      onMouseOver={rubberBandEffect}
     >
       {letter === " " ? "\u00A0" : letter}
     </motion.span>
