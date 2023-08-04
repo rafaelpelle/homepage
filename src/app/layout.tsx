@@ -18,7 +18,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" data-theme="dark">
       <body className={montserrat.className}>
-        <div className="bg-base-100 drawer lg:drawer-open">
+        <div className="bg-base-100 drawer lg:drawer-open h-screen">
           <input id="drawer" type="checkbox" className="drawer-toggle" />
 
           <div className="drawer-content">

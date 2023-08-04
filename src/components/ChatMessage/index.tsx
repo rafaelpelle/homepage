@@ -12,7 +12,7 @@ export interface ChatMessageProps {
 }
 
 export default function ChatMessage({
-  imgSrc = "/images/profileCropped.jpg",
+  imgSrc = "/images/profile.png",
   senderName = "",
   date = new Date(),
   text = "",
@@ -24,8 +24,8 @@ export default function ChatMessage({
       className="chat chat-start mb-3 last:mb-0"
     >
       <div className="chat-image avatar">
-        <div className="rounded-full">
-          <Image src={imgSrc} width={40} height={40} alt="Profile picture" />
+        <div className="rounded-full bg-base-300">
+          <Image src={imgSrc} width={50} height={50} alt="Profile picture" />
         </div>
       </div>
       <div className="chat-header">{senderName}</div>

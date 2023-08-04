@@ -1,52 +1,14 @@
 "use client";
 
-import { ChatLoading, ChatMessage } from "@/components";
+import { AnimatedLetter, ChatLoading, ChatMessage } from "@/components";
 import { ChatMessageProps } from "@/components/ChatMessage";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const chatMessages: ChatMessageProps[] = [
   { senderName: "Rafael Pelle", text: "Hi," },
   { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
-  { text: "I'm Rafael Pelle!" },
+  { text: "You can ask me a question, or navigate through the menu." },
 ];
 
 export default function IndexPage() {
@@ -71,7 +33,7 @@ export default function IndexPage() {
       } else {
         clearInterval(interval);
       }
-    }, 500);
+    }, 1500);
 
     return () => {
       clearInterval(interval);
@@ -83,7 +45,25 @@ export default function IndexPage() {
   }, [content]);
 
   return (
-    <div className="flex flex-col justify-end h-full p-6">
+    <div className="flex flex-col justify-end lg:justify-between h-full p-3 lg:p-20">
+      <div className="hidden lg:flex items-center justify-between">
+        <h1 className="text-6xl">
+          I&apos;m
+          <p className="text-8xl whitespace-nowrap">
+            {"Rafael".split("").map((letter, index) => (
+              <AnimatedLetter key={index} letter={letter} />
+            ))}
+          </p>
+        </h1>
+        <Image
+          className="rounded-full bg-blur"
+          alt="Rafael Pelle picture"
+          src="/images/profile.jpg"
+          width={300}
+          height={300}
+        />
+      </div>
+
       <div className="w-12/12 lg:w-6/12">
         {content.map((message, index) => (
           <ChatMessage key={index} {...message} />
