@@ -5,6 +5,7 @@ import ChatMessage from "./ChatMessage";
 import CloseIcon from "./CloseIcon";
 import DoubleCheckIcon from "./DoubleCheckIcon";
 import HamburgerIcon from "./HamburgerIcon";
+import RLetterIcon from "./RLetterIcon";
 
 export {
   AnimatedLetter,
@@ -14,4 +15,5 @@ export {
   CloseIcon,
   DoubleCheckIcon,
   HamburgerIcon,
+  RLetterIcon,
 };

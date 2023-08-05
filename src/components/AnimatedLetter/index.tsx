@@ -11,7 +11,7 @@ export default function AnimatedLetter({ letter }: AnimatedLetterProps) {
 
   const rubberBandEffect = () => {
     controls.start({
-      color: ["#FFF", "#34C55E", "#FFF"],
+      color: ["#FFF", "#3CCEFF", "#FFF"],
       transform: [
         "scale3d(1, 1, 1)",
         "scale3d(1.4, 0.55, 1)",
@@ -28,7 +28,7 @@ export default function AnimatedLetter({ letter }: AnimatedLetterProps) {
 
   return (
     <motion.span
-      className="inline-block px-1 font-bold"
+      className="inline-block font-bold"
       animate={controls}
       onMouseOver={rubberBandEffect}
     >

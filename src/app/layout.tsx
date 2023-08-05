@@ -1,10 +1,10 @@
-import { BackgroundPattern, HamburgerIcon } from "@/components";
+import { BackgroundPattern, HamburgerIcon, RLetterIcon } from "@/components";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 import React from "react";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const font = Fira_Code({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rafael Pelle",
@@ -51,9 +51,9 @@ const MobileLayout = ({ children }: RootLayoutProps) => (
 
 const DesktopLayout = ({ children }: RootLayoutProps) => (
   <div className="hidden lg:block relative z-10">
-    <div className="navbar mb-5">
+    <div className="navbar mb-5 px-5">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <RLetterIcon />
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
@@ -76,7 +76,9 @@ const DesktopLayout = ({ children }: RootLayoutProps) => (
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" data-theme="dark">
-      <body className="bg-base-100 min-h-screen">
+      <body
+        className={`${font.className} bg-base-100 min-h-screen selection:bg-primary selection:text-black`}
+      >
         <MobileLayout>{children}</MobileLayout>
         <DesktopLayout>{children}</DesktopLayout>
 

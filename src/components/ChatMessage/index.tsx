@@ -1,20 +1,21 @@
 "use client";
 
 import { DoubleCheckIcon } from "@/components";
+import dayjs, { Dayjs } from "dayjs";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export interface ChatMessageProps {
   imgSrc?: string;
   senderName?: string;
-  date?: Date;
+  date?: Dayjs;
   text: string;
 }
 
 export default function ChatMessage({
   imgSrc = "/images/profile.png",
   senderName = "",
-  date = new Date(),
+  date = dayjs(),
   text = "",
 }: ChatMessageProps) {
   return (
@@ -32,7 +33,7 @@ export default function ChatMessage({
       <div className="chat-bubble">
         {text}
         <time className="text-xs opacity-50 text-right flex items-center justify-end">
-          {date.getHours()}:{date.getMinutes()}
+          {date.format("HH:mm")}
           <span className="ml-1">
             <DoubleCheckIcon />
           </span>
