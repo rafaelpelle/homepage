@@ -48,6 +48,7 @@ export default function IndexPage() {
     <div className="flex flex-col justify-evenly lg:justify-between h-full p-3 pt-10 lg:pt-3 max-w-4xl mx-auto">
       <div className="flex items-center justify-between lg:mb-20">
         <Image
+          priority
           className="hidden lg:block rounded-full bg-blur"
           alt="Rafael Pelle picture"
           src="/images/profile.jpg"
