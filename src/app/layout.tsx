@@ -20,7 +20,7 @@ const MobileLayout = ({ children }: RootLayoutProps) => (
     <input id="drawer" type="checkbox" className="drawer-toggle" />
 
     <div className="drawer-content h-fit">
-      <div className="bg-base-100 w-full z-10 p-3 pr-7 flex justify-between items-center">
+      <div className="absolute top-0 bg-base-100 w-full z-10 p-3 pr-7 flex justify-between items-center">
         <label
           htmlFor="drawer"
           className="btn btn-circle drawer-button  btn-ghost text-primary"
@@ -30,7 +30,7 @@ const MobileLayout = ({ children }: RootLayoutProps) => (
         <RLetterIcon />
       </div>
 
-      {children}
+      <div className="container mt-20">{children}</div>
     </div>
 
     <div className="drawer-side z-20">
@@ -78,7 +78,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" data-theme="dark">
       <body
-        className={`${font.className} bg-base-100 min-h-screen min-h-max selection:bg-primary selection:text-black`}
+        className={`${font.className} bg-base-100 min-h-screen h-max selection:bg-primary selection:text-black`}
       >
         <MobileLayout>{children}</MobileLayout>
         <DesktopLayout>{children}</DesktopLayout>
