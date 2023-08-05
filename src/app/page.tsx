@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const chatMessages: ChatMessageProps[] = [
-  { senderName: "Rafael Pelle", text: "Hi," },
+  { text: "Hi," },
   { text: "I'm Rafael Pelle!" },
   { text: "You can ask me a question, or navigate through the menu." },
 ];
