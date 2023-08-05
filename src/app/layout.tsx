@@ -39,7 +39,7 @@ const MobileLayout = ({ children }: RootLayoutProps) => (
           <a>About</a>
         </li>
         <li>
-          <a>Portfolio</a>
+          <a>Projects</a>
         </li>
         <li>
           <a>GitHub</a>
@@ -61,7 +61,7 @@ const DesktopLayout = ({ children }: RootLayoutProps) => (
             <a>About</a>
           </li>
           <li>
-            <a>Portfolio</a>
+            <a>Projects</a>
           </li>
           <li>
             <a>GitHub</a>
