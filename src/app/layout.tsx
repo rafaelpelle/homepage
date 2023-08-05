@@ -16,23 +16,24 @@ export interface RootLayoutProps {
 }
 
 const MobileLayout = ({ children }: RootLayoutProps) => (
-  <div className="drawer lg:hidden h-screen relative z-10">
+  <div className="drawer lg:hidden min-h-screen relative z-10">
     <input id="drawer" type="checkbox" className="drawer-toggle" />
 
-    <div className="drawer-content overflow-auto">
-      <div className="sticky top-0 bg-base-300 h-16 w-full z-1 px-3 flex items-center">
+    <div className="drawer-content h-fit">
+      <div className="bg-base-100 w-full z-10 p-3 pr-7 flex justify-between items-center">
         <label
           htmlFor="drawer"
-          className="btn btn-circle drawer-button btn-ghost"
+          className="btn btn-circle drawer-button  btn-ghost text-primary"
         >
           <HamburgerIcon />
         </label>
+        <RLetterIcon />
       </div>
 
       {children}
     </div>
 
-    <div className="drawer-side">
+    <div className="drawer-side z-20">
       <label htmlFor="drawer" className="drawer-overlay"></label>
       <ul className="menu p-4 w-80 h-full bg-base-300 text-base-content">
         <li>
@@ -77,7 +78,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" data-theme="dark">
       <body
-        className={`${font.className} bg-base-100 min-h-screen selection:bg-primary selection:text-black`}
+        className={`${font.className} bg-base-100 min-h-screen min-h-max selection:bg-primary selection:text-black`}
       >
         <MobileLayout>{children}</MobileLayout>
         <DesktopLayout>{children}</DesktopLayout>
@@ -86,7 +87,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <BackgroundPattern />
         </div>
 
-        <div className="hidden lg:block absolute top-80 right-0 -rotate-45">
+        <div className="hidden lg:block absolute top-96 right-0 -rotate-45">
           <BackgroundPattern />
         </div>
       </body>

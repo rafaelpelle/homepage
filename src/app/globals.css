@@ -10,6 +10,7 @@
 }
 
 body {
+  box-sizing: border-box !important;
   max-width: 100%;
   overflow-x: hidden;
   color: rgb(var(--foreground-rgb));

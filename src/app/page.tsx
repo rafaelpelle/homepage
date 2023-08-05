@@ -9,6 +9,12 @@ const chatMessages: ChatMessageProps[] = [
   { text: "Hi," },
   { text: "I'm Rafael Pelle!" },
   { text: "You can ask me a question, or navigate through the menu." },
+  { text: "You can ask me a question, or navigate through the menu." },
+  { text: "You can ask me a question, or navigate through the menu." },
+  { text: "You can ask me a question, or navigate through the menu." },
+  { text: "You can ask me a question, or navigate through the menu." },
+  { text: "You can ask me a question, or navigate through the menu." },
+  { text: "You can ask me a question, or navigate through the menu." },
 ];
 
 export default function IndexPage() {
@@ -41,12 +47,14 @@ export default function IndexPage() {
   }, [content, contentIndex]);
 
   useEffect(() => {
-    scrollToBottom();
-  }, [content]);
+    if (contentIndex > 2) {
+      scrollToBottom();
+    }
+  }, [contentIndex]);
 
   return (
-    <div className="flex flex-col justify-evenly lg:justify-between h-full p-3 pt-10 lg:pt-3 max-w-4xl mx-auto">
-      <div className="flex items-center justify-between lg:mb-20">
+    <div className="flex flex-col justify-evenly lg:justify-between h-full p-3 max-w-4xl mx-auto">
+      <div className="flex items-center justify-between mb-6 lg:mb-20">
         <Image
           priority
           className="hidden lg:block rounded-full bg-blur"
@@ -69,7 +77,7 @@ export default function IndexPage() {
             </p>
           </h1>
           <p className="text-slate-500 pl-2">
-            Web developer specialized in React
+            Front-end web developer specialized in React
           </p>
         </div>
       </div>
