@@ -1,4 +1,5 @@
 import AnimatedLetter from "./AnimatedLetter";
+import BackgroundPattern from "./BackgroundPattern";
 import ChatLoading from "./ChatLoading";
 import ChatMessage from "./ChatMessage";
 import CloseIcon from "./CloseIcon";
@@ -7,6 +8,7 @@ import HamburgerIcon from "./HamburgerIcon";
 
 export {
   AnimatedLetter,
+  BackgroundPattern,
   ChatLoading,
   ChatMessage,
   CloseIcon,
