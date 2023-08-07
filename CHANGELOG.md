@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/rafaelpelle/homepage/compare/v1.0.0...v1.0.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* lint warnings ([9efe520](https://github.com/rafaelpelle/homepage/commit/9efe520d3663839b9423f38e0719075f5a18684c))
+
 # 1.0.0 (2023-08-07)
 
 
