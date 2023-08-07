@@ -1,20 +1,25 @@
 "use client";
 
-import { AnimatedLetter, ChatLoading, ChatMessage } from "@/components";
+import {
+  AnimatedLetter,
+  ChatLoading,
+  ChatMessage,
+  QuestionMenu,
+} from "@/components";
 import { useChatMessage } from "@/hooks/useChatMessage";
 import Image from "next/image";
 import { useMemo, useRef } from "react";
 
 export default function IndexPage() {
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
-  const { content, isTyping } = useChatMessage(messagesEndRef);
+  const { messages, isTyping, questions } = useChatMessage(messagesEndRef);
 
   const firstName = useMemo(
     () =>
       "Rafael"
         .split("")
         .map((letter, index) => <AnimatedLetter key={index} letter={letter} />),
-    [],
+    []
   );
 
   const lastName = useMemo(
@@ -22,7 +27,7 @@ export default function IndexPage() {
       "Pelle"
         .split("")
         .map((letter, index) => <AnimatedLetter key={index} letter={letter} />),
-    [],
+    []
   );
 
   return (
@@ -50,11 +55,15 @@ export default function IndexPage() {
         </div>
       </div>
 
-      <div className="w-12/12 sm:w-6/12">
-        {content.map((message, index) => (
+      <div className="w-12/12">
+        {messages.map((message, index) => (
           <ChatMessage key={index} {...message} />
         ))}
         {isTyping && <ChatLoading />}
+
+        {!isTyping && questions.length > 0 && (
+          <QuestionMenu questions={questions} />
+        )}
         <div ref={messagesEndRef} />
       </div>
     </div>

@@ -22,7 +22,7 @@ export default function ChatMessage({
     <motion.div
       initial={{ translate: "-100px 0px", opacity: 0 }}
       animate={{ translate: "0px 0px", opacity: 1 }}
-      className="chat chat-start mb-3 last:mb-0"
+      className="chat chat-start mb-3 last:mb-0 sm:w-3/5"
     >
       <div className="chat-image avatar">
         <div className="rounded-full bg-base-300">
