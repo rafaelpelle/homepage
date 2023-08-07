@@ -14,7 +14,7 @@ export default function IndexPage() {
       "Rafael"
         .split("")
         .map((letter, index) => <AnimatedLetter key={index} letter={letter} />),
-    []
+    [],
   );
 
   const lastName = useMemo(
@@ -22,7 +22,7 @@ export default function IndexPage() {
       "Pelle"
         .split("")
         .map((letter, index) => <AnimatedLetter key={index} letter={letter} />),
-    []
+    [],
   );
 
   return (
