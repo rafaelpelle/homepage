@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/rafaelpelle/homepage/compare/v1.0.1...v1.1.0) (2023-08-07)
+
+
+### Features
+
+* questions styling ([449f875](https://github.com/rafaelpelle/homepage/commit/449f87501944c7213bfdae3c1ae443705ff232aa))
+
 ## [1.0.1](https://github.com/rafaelpelle/homepage/compare/v1.0.0...v1.0.1) (2023-08-07)
 
 
