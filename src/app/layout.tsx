@@ -8,7 +8,8 @@ const font = Fira_Code({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Rafael Pelle",
-  description: "Pelle's web page",
+  description: "My web page",
+  themeColor: "#1C2128",
 };
 
 export interface RootLayoutProps {
