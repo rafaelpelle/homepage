@@ -16,11 +16,11 @@ export interface RootLayoutProps {
 }
 
 const MobileLayout = ({ children }: RootLayoutProps) => (
-  <div className="drawer lg:hidden min-h-screen relative z-10">
+  <div className="drawer sm:hidden min-h-screen relative z-10">
     <input id="drawer" type="checkbox" className="drawer-toggle" />
 
     <div className="drawer-content h-fit">
-      <div className="absolute top-0 bg-base-100 w-full z-10 p-3 pr-7 flex justify-between items-center">
+      <div className="absolute top-0 w-full z-10 p-3 pr-7 flex justify-between items-center">
         <label
           htmlFor="drawer"
           className="btn btn-circle drawer-button  btn-ghost text-primary"
@@ -51,7 +51,7 @@ const MobileLayout = ({ children }: RootLayoutProps) => (
 );
 
 const DesktopLayout = ({ children }: RootLayoutProps) => (
-  <div className="hidden lg:block relative z-10">
+  <div className="hidden sm:block relative z-10">
     <div className="navbar mb-5 px-5">
       <div className="flex-1">
         <RLetterIcon />
@@ -83,11 +83,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <MobileLayout>{children}</MobileLayout>
         <DesktopLayout>{children}</DesktopLayout>
 
-        <div className="hidden lg:block absolute top-60 left-0 -rotate-90">
+        <div className="hidden sm:block absolute top-60 left-0 -rotate-90">
           <BackgroundPattern />
         </div>
 
-        <div className="hidden lg:block absolute top-96 right-0 -rotate-45">
+        <div className="hidden sm:block absolute top-96 right-0 -rotate-45">
           <BackgroundPattern />
         </div>
       </body>
