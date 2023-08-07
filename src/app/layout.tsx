@@ -83,11 +83,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <MobileLayout>{children}</MobileLayout>
         <DesktopLayout>{children}</DesktopLayout>
 
-        <div className="hidden sm:block absolute top-60 left-0 -rotate-90">
+        <div className="absolute top-10 sm:top-60 left-0 sm:-rotate-90">
           <BackgroundPattern />
         </div>
 
-        <div className="hidden sm:block absolute top-96 right-0 -rotate-45">
+        <div className="absolute top-24 sm:top-96 right-0 sm:-rotate-45">
           <BackgroundPattern />
         </div>
       </body>
