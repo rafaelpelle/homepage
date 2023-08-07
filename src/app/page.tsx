@@ -1,22 +1,13 @@
 "use client";
 
 import { AnimatedLetter, ChatLoading, ChatMessage } from "@/components";
-import { ChatMessageProps } from "@/components/ChatMessage";
+import { useChatMessage } from "@/hooks/useChatMessage";
 import Image from "next/image";
-import { useEffect, useMemo, useRef, useState } from "react";
-
-const chatMessages: ChatMessageProps[] = [
-  { text: "Hi," },
-  { text: "I'm Rafael Pelle!" },
-  { text: "You can ask me a question, or navigate through the menu." },
-];
+import { useMemo, useRef } from "react";
 
 export default function IndexPage() {
-  const [contentIndex, setContentIndex] = useState<number>(0);
-  const [content, setContent] = useState<ChatMessageProps[]>([]);
-  const [isTyping, setIsTyping] = useState<boolean>(true);
-
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
+  const { content, isTyping } = useChatMessage(messagesEndRef);
 
   const firstName = useMemo(
     () =>
@@ -33,34 +24,6 @@ export default function IndexPage() {
         .map((letter, index) => <AnimatedLetter key={index} letter={letter} />),
     []
   );
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (contentIndex < chatMessages.length) {
-        setContent([...content, chatMessages[contentIndex]]);
-        setContentIndex(contentIndex + 1);
-        if (contentIndex === chatMessages.length - 1) {
-          setIsTyping(false);
-        }
-      } else {
-        clearInterval(interval);
-      }
-    }, 1500);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [content, contentIndex]);
-
-  useEffect(() => {
-    if (contentIndex > 2) {
-      scrollToBottom();
-    }
-  }, [contentIndex]);
 
   return (
     <div className="flex flex-col justify-evenly sm:justify-between h-full w-full p-3 mx-auto max-w-full sm:max-w-4xl">
