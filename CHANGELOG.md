@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/rafaelpelle/homepage/compare/v1.4.0...v1.5.0) (2023-08-08)
+
+
+### Features
+
+* ShowProjects content ([5a9d052](https://github.com/rafaelpelle/homepage/commit/5a9d0527900df84641afd2570102be0b72ee5409))
+
 # [1.4.0](https://github.com/rafaelpelle/homepage/compare/v1.3.0...v1.4.0) (2023-08-08)
 
 
