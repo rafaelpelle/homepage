@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/rafaelpelle/homepage/compare/v1.3.0...v1.4.0) (2023-08-08)
+
+
+### Features
+
+* AboutCareer content ([b277130](https://github.com/rafaelpelle/homepage/commit/b27713023a417669968b5a69644c787fcdfff489))
+* improve not found page ([2a9e2e4](https://github.com/rafaelpelle/homepage/commit/2a9e2e453e3e0502e35d816ddc2e03b2721ba7b4))
+
 # [1.3.0](https://github.com/rafaelpelle/homepage/compare/v1.2.0...v1.3.0) (2023-08-08)
 
 
