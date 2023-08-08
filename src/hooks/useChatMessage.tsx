@@ -73,8 +73,17 @@ export function useChatMessage(
         const response: ChatMessageProps = {
           text: rootResponses[index],
         };
-        setMessages([...newMessages, response]);
+        const newMsgs = [...newMessages, response];
+        setMessages(newMsgs);
         setIsTyping(false);
+        setQuestions(
+          rootQuestions.map((question) => ({
+            question,
+            clickHandler: () => {
+              questionClickHandler(question, newMsgs);
+            },
+          })),
+        );
       }, 1500);
     },
     [],
