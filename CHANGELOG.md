@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/rafaelpelle/homepage/compare/v1.2.0...v1.3.0) (2023-08-08)
+
+
+### Features
+
+* generic questionClickHandler ([6a8c8cc](https://github.com/rafaelpelle/homepage/commit/6a8c8cce0728a44b23f4f0708b4a9ade99a4e9e4))
+
 # [1.2.0](https://github.com/rafaelpelle/homepage/compare/v1.1.0...v1.2.0) (2023-08-08)
 
 
