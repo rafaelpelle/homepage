@@ -1,15 +1,15 @@
-import { BackgroundPattern, HamburgerIcon, RLetterIcon } from "@/components";
-import type { Metadata } from "next";
-import { Fira_Code } from "next/font/google";
-import React from "react";
-import "./globals.css";
+import { BackgroundPattern, HamburgerIcon, RLetterIcon } from '@/components';
+import type { Metadata } from 'next';
+import { Fira_Code } from 'next/font/google';
+import React from 'react';
+import './globals.css';
 
-const font = Fira_Code({ subsets: ["latin"] });
+const font = Fira_Code({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Rafael Pelle",
-  description: "My web page",
-  themeColor: "#1C2128",
+  title: 'Rafael Pelle',
+  description: 'My web page',
+  themeColor: '#1C2128',
 };
 
 export interface RootLayoutProps {
