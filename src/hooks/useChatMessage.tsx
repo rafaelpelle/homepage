@@ -1,13 +1,30 @@
+import { GetInTouchResponse } from '@/components';
 import { ChatMessageProps } from '@/components/ChatMessage';
 import { QuestionMenuItemProps } from '@/components/QuestionMenu/QuestionMenuItem';
-import Link from 'next/link';
 import { MutableRefObject, useCallback, useEffect, useState } from 'react';
+
+export type ChatQuestion =
+  | 'Can you tell me about your career?'
+  | 'Can you show me your projects?'
+  | 'How do I get in touch with you?';
 
 const rootMessages: ChatMessageProps[] = [
   { text: 'Hi,' },
   { text: "I'm Rafael Pelle!" },
   { text: 'You can ask me a question, or navigate through the menu.' },
 ];
+
+const rootQuestions: ChatQuestion[] = [
+  'Can you tell me about your career?',
+  'Can you show me your projects?',
+  'How do I get in touch with you?',
+];
+
+const responseTemplate: ChatMessageProps = {
+  text: '',
+  align: 'end',
+  imgSrc: '/images/guest_profile.png',
+};
 
 export function useChatMessage(
   messagesEndRef: MutableRefObject<null | HTMLDivElement>,
@@ -16,49 +33,55 @@ export function useChatMessage(
   const [isTyping, setIsTyping] = useState<boolean>(true);
   const [questions, setQuestions] = useState<QuestionMenuItemProps[]>([]);
 
-  const handleGetInTouchClick = useCallback((msgs: ChatMessageProps[]) => {
-    if (typeof (document.activeElement as HTMLElement)?.blur === 'function') {
-      (document.activeElement as HTMLElement).blur();
+  const closeQuestionDropdown = () => {
+    const dropdown = document.activeElement as HTMLElement;
+    if (typeof dropdown?.blur === 'function') {
+      dropdown.blur();
     }
+  };
 
-    const newMessage: ChatMessageProps = {
-      text: 'How do I get in touch with you?',
-      align: 'end',
-      imgSrc: '/images/guest_profile.png',
-    };
-    const newMessages = [...msgs, newMessage];
+  const handleAboutCareerClick = useCallback((msgs: ChatMessageProps[]) => {
+    console.log('handleAboutCareerClick', msgs);
+  }, []);
+
+  const handleShowProjectsClick = useCallback((msgs: ChatMessageProps[]) => {
+    console.log('handleShowProjectsClick', msgs);
+  }, []);
+
+  const handleGetInTouchClick = useCallback((msgs: ChatMessageProps[]) => {
+    closeQuestionDropdown();
+    const newMessages = [
+      ...msgs,
+      {
+        ...responseTemplate,
+        text: rootQuestions[2],
+      },
+    ];
     setMessages(newMessages);
     setQuestions([]);
     setIsTyping(true);
-
     setTimeout(() => {
       const response: ChatMessageProps = {
-        text: (
-          <>
-            You can send me an{' '}
-            <Link
-              className="text-primary cursor-pointer"
-              target="_blank"
-              href="mailto:rafapelle@gmail.com"
-            >
-              e-mail
-            </Link>{' '}
-            or a{' '}
-            <Link
-              className="text-primary cursor-pointer"
-              target="_blank"
-              href="https://www.linkedin.com/in/rafael-pelle-23429317a/"
-            >
-              LinkedIn
-            </Link>{' '}
-            message!
-          </>
-        ),
+        text: <GetInTouchResponse />,
       };
       setMessages([...newMessages, response]);
       setIsTyping(false);
     }, 1500);
   }, []);
+
+  const getClickHandler = useCallback(
+    (question: ChatQuestion) => {
+      switch (question) {
+        case rootQuestions[0]:
+          return handleAboutCareerClick;
+        case rootQuestions[1]:
+          return handleShowProjectsClick;
+        default:
+          return handleGetInTouchClick;
+      }
+    },
+    [handleAboutCareerClick, handleGetInTouchClick, handleShowProjectsClick],
+  );
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -71,24 +94,15 @@ export function useChatMessage(
         setMessages(newMessages);
         if (newMessages.length === rootMessages.length) {
           setIsTyping(false);
-          setQuestions([
-            {
-              question: 'Can you tell me about your career?',
+          setQuestions(
+            rootQuestions.map((question) => ({
+              question,
               clickHandler: () => {
-                console.log('Can you tell me about your career?');
+                const handler = getClickHandler(question);
+                handler(newMessages);
               },
-            },
-            {
-              question: 'Can you show me your projects?',
-              clickHandler: () => {
-                console.log('Can you show me your projects?');
-              },
-            },
-            {
-              question: 'How do I get in touch with you?',
-              clickHandler: () => handleGetInTouchClick(newMessages),
-            },
-          ]);
+            })),
+          );
         }
       } else {
         clearInterval(interval);
@@ -98,7 +112,7 @@ export function useChatMessage(
     return () => {
       clearInterval(interval);
     };
-  }, [messages, handleGetInTouchClick]);
+  }, [messages, getClickHandler]);
 
   useEffect(() => {
     if (messages.length >= 2) {

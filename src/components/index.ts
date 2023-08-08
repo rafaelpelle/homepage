@@ -4,6 +4,7 @@ import ChatLoading from './ChatLoading';
 import ChatMessage from './ChatMessage';
 import CloseIcon from './CloseIcon';
 import DoubleCheckIcon from './DoubleCheckIcon';
+import GetInTouchResponse from './GetInTouchResponse';
 import GuestIcon from './GuestIcon';
 import HamburgerIcon from './HamburgerIcon';
 import QuestionMenu from './QuestionMenu';
@@ -17,6 +18,7 @@ export {
   ChatMessage,
   CloseIcon,
   DoubleCheckIcon,
+  GetInTouchResponse,
   GuestIcon,
   HamburgerIcon,
   QuestionMenu,
