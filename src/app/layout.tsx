@@ -1,6 +1,7 @@
 import { BackgroundPattern, HamburgerIcon, RLetterIcon } from '@/components';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
+import Link from 'next/link';
 import React from 'react';
 import './globals.css';
 
@@ -15,6 +16,33 @@ export const metadata: Metadata = {
 export interface RootLayoutProps {
   children: React.ReactNode;
 }
+
+const linkClassName = 'text-primary hover:bg-primary hover:text-slate-900';
+
+const menuLinks = [
+  {
+    text: 'Work Experience',
+    href: '/experience',
+  },
+  {
+    text: 'Projects',
+    href: '/projects',
+  },
+  {
+    text: 'GitHub',
+    href: 'https://github.com/rafaelpelle/',
+    target: '_blank',
+  },
+];
+
+const MenuListItems = () =>
+  menuLinks.map(({ text, target, href }) => (
+    <li key={href}>
+      <Link className={linkClassName} target={target} href={href}>
+        {text}
+      </Link>
+    </li>
+  ));
 
 const MobileLayout = ({ children }: RootLayoutProps) => (
   <div className="drawer sm:hidden min-h-screen relative z-10">
@@ -37,15 +65,7 @@ const MobileLayout = ({ children }: RootLayoutProps) => (
     <div className="drawer-side z-20">
       <label htmlFor="drawer" className="drawer-overlay"></label>
       <ul className="menu p-4 w-80 h-full bg-base-300 text-base-content">
-        <li>
-          <a>About</a>
-        </li>
-        <li>
-          <a>Projects</a>
-        </li>
-        <li>
-          <a>GitHub</a>
-        </li>
+        <MenuListItems />
       </ul>
     </div>
   </div>
@@ -59,15 +79,7 @@ const DesktopLayout = ({ children }: RootLayoutProps) => (
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>About</a>
-          </li>
-          <li>
-            <a>Projects</a>
-          </li>
-          <li>
-            <a>GitHub</a>
-          </li>
+          <MenuListItems />
         </ul>
       </div>
     </div>
