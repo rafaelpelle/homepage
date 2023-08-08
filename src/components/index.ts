@@ -1,3 +1,4 @@
+import AboutCareerResponse from './AboutCareerResponse';
 import AnimatedLetter from './AnimatedLetter';
 import BackgroundPattern from './BackgroundPattern';
 import ChatLoading from './ChatLoading';
@@ -10,8 +11,10 @@ import HamburgerIcon from './HamburgerIcon';
 import QuestionMenu from './QuestionMenu';
 import QuestionMenuItem from './QuestionMenu/QuestionMenuItem';
 import RLetterIcon from './RLetterIcon';
+import ShowProjectsResponse from './ShowProjectsResponse';
 
 export {
+  AboutCareerResponse,
   AnimatedLetter,
   BackgroundPattern,
   ChatLoading,
@@ -24,4 +27,5 @@ export {
   QuestionMenu,
   QuestionMenuItem,
   RLetterIcon,
+  ShowProjectsResponse,
 };

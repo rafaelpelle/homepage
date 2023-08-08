@@ -1,7 +1,17 @@
-import { GetInTouchResponse } from '@/components';
+import {
+  AboutCareerResponse,
+  GetInTouchResponse,
+  ShowProjectsResponse,
+} from '@/components';
 import { ChatMessageProps } from '@/components/ChatMessage';
 import { QuestionMenuItemProps } from '@/components/QuestionMenu/QuestionMenuItem';
-import { MutableRefObject, useCallback, useEffect, useState } from 'react';
+import {
+  MutableRefObject,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 
 export type ChatQuestion =
   | 'Can you tell me about your career?'
@@ -18,6 +28,12 @@ const rootQuestions: ChatQuestion[] = [
   'Can you tell me about your career?',
   'Can you show me your projects?',
   'How do I get in touch with you?',
+];
+
+const rootResponses: ReactNode[] = [
+  <AboutCareerResponse key="AboutCareerResponse" />,
+  <ShowProjectsResponse key="ShowProjectsResponse" />,
+  <GetInTouchResponse key="GetInTouchResponse" />,
 ];
 
 const responseTemplate: ChatMessageProps = {
@@ -40,47 +56,28 @@ export function useChatMessage(
     }
   };
 
-  const handleAboutCareerClick = useCallback((msgs: ChatMessageProps[]) => {
-    console.log('handleAboutCareerClick', msgs);
-  }, []);
+  const getQuestionMessage = (index: number) => ({
+    ...responseTemplate,
+    text: rootQuestions[index],
+  });
 
-  const handleShowProjectsClick = useCallback((msgs: ChatMessageProps[]) => {
-    console.log('handleShowProjectsClick', msgs);
-  }, []);
-
-  const handleGetInTouchClick = useCallback((msgs: ChatMessageProps[]) => {
-    closeQuestionDropdown();
-    const newMessages = [
-      ...msgs,
-      {
-        ...responseTemplate,
-        text: rootQuestions[2],
-      },
-    ];
-    setMessages(newMessages);
-    setQuestions([]);
-    setIsTyping(true);
-    setTimeout(() => {
-      const response: ChatMessageProps = {
-        text: <GetInTouchResponse />,
-      };
-      setMessages([...newMessages, response]);
-      setIsTyping(false);
-    }, 1500);
-  }, []);
-
-  const getClickHandler = useCallback(
-    (question: ChatQuestion) => {
-      switch (question) {
-        case rootQuestions[0]:
-          return handleAboutCareerClick;
-        case rootQuestions[1]:
-          return handleShowProjectsClick;
-        default:
-          return handleGetInTouchClick;
-      }
+  const questionClickHandler = useCallback(
+    (question: ChatQuestion, msgs: ChatMessageProps[]) => {
+      const index = rootQuestions.indexOf(question);
+      closeQuestionDropdown();
+      const newMessages = [...msgs, getQuestionMessage(index)];
+      setMessages(newMessages);
+      setQuestions([]);
+      setIsTyping(true);
+      setTimeout(() => {
+        const response: ChatMessageProps = {
+          text: rootResponses[index],
+        };
+        setMessages([...newMessages, response]);
+        setIsTyping(false);
+      }, 1500);
     },
-    [handleAboutCareerClick, handleGetInTouchClick, handleShowProjectsClick],
+    [],
   );
 
   const scrollToBottom = useCallback(() => {
@@ -98,8 +95,7 @@ export function useChatMessage(
             rootQuestions.map((question) => ({
               question,
               clickHandler: () => {
-                const handler = getClickHandler(question);
-                handler(newMessages);
+                questionClickHandler(question, newMessages);
               },
             })),
           );
@@ -112,7 +108,7 @@ export function useChatMessage(
     return () => {
       clearInterval(interval);
     };
-  }, [messages, getClickHandler]);
+  }, [messages, questionClickHandler]);
 
   useEffect(() => {
     if (messages.length >= 2) {
