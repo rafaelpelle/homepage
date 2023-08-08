@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/rafaelpelle/homepage/compare/v1.5.0...v1.6.0) (2023-08-08)
+
+
+### Features
+
+* improve animations ([e9489f5](https://github.com/rafaelpelle/homepage/commit/e9489f5b3aa30a3b7882612a64c7f9bfe131b8c6))
+
 # [1.5.0](https://github.com/rafaelpelle/homepage/compare/v1.4.0...v1.5.0) (2023-08-08)
 
 
