@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/rafaelpelle/homepage/compare/v1.1.0...v1.2.0) (2023-08-08)
+
+
+### Bug Fixes
+
+* prettier config ([0ca9b0a](https://github.com/rafaelpelle/homepage/commit/0ca9b0a6e47f10c760d4b0d94a226ce64d4b31aa))
+* remove old prettier config ([e0ccd21](https://github.com/rafaelpelle/homepage/commit/e0ccd2171daad4c52e300476a5c8d8f005fd6c3e))
+
+
+### Features
+
+* questions menu and first anwser ([025da97](https://github.com/rafaelpelle/homepage/commit/025da9768e64caf2d1a108e2264c88b3209c18b8))
+
 # [1.1.0](https://github.com/rafaelpelle/homepage/compare/v1.0.1...v1.1.0) (2023-08-07)
 
 
