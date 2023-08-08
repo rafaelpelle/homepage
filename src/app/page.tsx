@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
 import {
   AnimatedLetter,
   ChatLoading,
   ChatMessage,
   QuestionMenu,
-} from "@/components";
-import { useChatMessage } from "@/hooks/useChatMessage";
-import Image from "next/image";
-import { useMemo, useRef } from "react";
+} from '@/components';
+import { useChatMessage } from '@/hooks/useChatMessage';
+import Image from 'next/image';
+import { useMemo, useRef } from 'react';
 
 export default function IndexPage() {
   const messagesEndRef = useRef<null | HTMLDivElement>(null);
@@ -16,18 +16,18 @@ export default function IndexPage() {
 
   const firstName = useMemo(
     () =>
-      "Rafael"
-        .split("")
+      'Rafael'
+        .split('')
         .map((letter, index) => <AnimatedLetter key={index} letter={letter} />),
-    []
+    [],
   );
 
   const lastName = useMemo(
     () =>
-      "Pelle"
-        .split("")
+      'Pelle'
+        .split('')
         .map((letter, index) => <AnimatedLetter key={index} letter={letter} />),
-    []
+    [],
   );
 
   return (

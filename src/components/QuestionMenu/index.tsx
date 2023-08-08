@@ -1,13 +1,13 @@
-import QuestionMenuItem from "./QuestionMenuItem";
+import QuestionMenuItem, { QuestionMenuItemProps } from './QuestionMenuItem';
 
 export interface QuestionMenuProps {
-  questions: string[];
+  questions: QuestionMenuItemProps[];
 }
 
 export default function QuestionMenu({ questions }: QuestionMenuProps) {
   return (
     <div className="w-full flex justify-end">
-      <div className="dropdown dropdown-left dropdown-end">
+      <div className="dropdown dropdown-left dropdown-end dropdown-hover">
         <label tabIndex={0} className="btn btn-primary m-1">
           Questions
         </label>
@@ -15,8 +15,12 @@ export default function QuestionMenu({ questions }: QuestionMenuProps) {
           tabIndex={0}
           className="dropdown-content rounded menu p-5 shadow z-[1] w-52 bg-opacity-80 backdrop-blur"
         >
-          {questions.map((question) => (
-            <QuestionMenuItem key={question} question={question} />
+          {questions.map(({ question, clickHandler }) => (
+            <QuestionMenuItem
+              key={question}
+              question={question}
+              clickHandler={clickHandler}
+            />
           ))}
         </ul>
       </div>
