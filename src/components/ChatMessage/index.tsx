@@ -33,7 +33,8 @@ export default function ChatMessage({
         </div>
       </div>
       <div className="chat-header">{senderName}</div>
-      <div
+      <motion.div
+        whileHover={{ scale: 1.05, left: align === 'start' ? 20 : -20 }}
         className={`chat-bubble ${
           align === 'end' ? 'bg-primary text-slate-900' : ''
         }`}
@@ -45,7 +46,7 @@ export default function ChatMessage({
             <DoubleCheckIcon />
           </span>
         </time>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
