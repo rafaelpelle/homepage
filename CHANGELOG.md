@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/rafaelpelle/homepage/compare/v1.7.0...v1.8.0) (2023-08-09)
+
+
+### Features
+
+* new RP logo ([e2078d6](https://github.com/rafaelpelle/homepage/commit/e2078d6704b1fa9943b641fe7623bc926438f171))
+
 # [1.7.0](https://github.com/rafaelpelle/homepage/compare/v1.6.0...v1.7.0) (2023-08-09)
 
 
