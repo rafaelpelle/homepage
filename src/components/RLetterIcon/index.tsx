@@ -1,8 +1,7 @@
 export default function RLetterIcon() {
   return (
     <svg
-      style={{ maxWidth: "3rem" }}
-      id="logo"
+      style={{ maxWidth: '3rem' }}
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       viewBox="0 0 84 96"

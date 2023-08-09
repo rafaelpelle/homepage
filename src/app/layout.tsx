@@ -1,4 +1,4 @@
-import { BackgroundPattern, HamburgerIcon, RLetterIcon } from '@/components';
+import { HamburgerIcon, RLetterIcon } from '@/components';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import Link from 'next/link';
@@ -21,8 +21,8 @@ const linkClassName = 'text-primary hover:bg-primary hover:text-slate-900';
 
 const menuLinks = [
   {
-    text: 'Work Experience',
-    href: '/experience',
+    text: 'Work History',
+    href: '/history',
   },
   {
     text: 'Projects',
@@ -56,7 +56,10 @@ const MobileLayout = ({ children }: RootLayoutProps) => (
         >
           <HamburgerIcon />
         </label>
-        <RLetterIcon />
+
+        <Link className="w-12" href="/">
+          <RLetterIcon />
+        </Link>
       </div>
 
       <div className="container mt-20">{children}</div>
@@ -75,7 +78,9 @@ const DesktopLayout = ({ children }: RootLayoutProps) => (
   <div className="hidden sm:block relative z-10">
     <div className="navbar mb-5 px-5">
       <div className="flex-1">
-        <RLetterIcon />
+        <Link className="w-12" href="/">
+          <RLetterIcon />
+        </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
@@ -95,14 +100,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <MobileLayout>{children}</MobileLayout>
         <DesktopLayout>{children}</DesktopLayout>
-
-        <div className="absolute top-10 sm:top-60 left-0 sm:-rotate-90">
-          <BackgroundPattern />
-        </div>
-
-        <div className="absolute top-24 sm:top-96 right-0 sm:-rotate-45">
-          <BackgroundPattern />
-        </div>
       </body>
     </html>
   );
