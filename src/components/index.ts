@@ -10,7 +10,7 @@ import GuestIcon from './GuestIcon';
 import HamburgerIcon from './HamburgerIcon';
 import QuestionMenu from './QuestionMenu';
 import QuestionMenuItem from './QuestionMenu/QuestionMenuItem';
-import RLetterIcon from './RLetterIcon';
+import RPLogo from './RPLogo';
 import ShowProjectsResponse from './ShowProjectsResponse';
 
 export {
@@ -26,6 +26,6 @@ export {
   HamburgerIcon,
   QuestionMenu,
   QuestionMenuItem,
-  RLetterIcon,
+  RPLogo,
   ShowProjectsResponse,
 };

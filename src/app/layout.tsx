@@ -1,4 +1,4 @@
-import { HamburgerIcon, RLetterIcon } from '@/components';
+import { HamburgerIcon, RPLogo } from '@/components';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import Link from 'next/link';
@@ -57,8 +57,8 @@ const MobileLayout = ({ children }: RootLayoutProps) => (
           <HamburgerIcon />
         </label>
 
-        <Link className="w-12" href="/">
-          <RLetterIcon />
+        <Link href="/">
+          <RPLogo />
         </Link>
       </div>
 
@@ -78,8 +78,8 @@ const DesktopLayout = ({ children }: RootLayoutProps) => (
   <div className="hidden sm:block relative z-10">
     <div className="navbar mb-5 px-5">
       <div className="flex-1">
-        <Link className="w-12" href="/">
-          <RLetterIcon />
+        <Link href="/">
+          <RPLogo />
         </Link>
       </div>
       <div className="flex-none">
