@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/rafaelpelle/homepage/compare/v1.6.0...v1.7.0) (2023-08-09)
+
+
+### Features
+
+* work history page ([f3a47bf](https://github.com/rafaelpelle/homepage/commit/f3a47bf4fc67eff129181a611933d9c5e2f23cca))
+
 # [1.6.0](https://github.com/rafaelpelle/homepage/compare/v1.5.0...v1.6.0) (2023-08-08)
 
 
