@@ -1,4 +1,3 @@
-import rafaelPictureSrc from '@/../public/images/profile.jpg';
 import { AnimatedFullName, BackgroundPattern } from '@/components';
 import ChatContainer from '@/components/ChatContainer';
 import Head from 'next/head';
@@ -16,7 +15,9 @@ export default function IndexPage() {
           <Image
             className="rounded-full bg-blur w-52 sm:w-72"
             alt="Rafael Pelle picture"
-            src={rafaelPictureSrc}
+            src="/images/profile.jpg"
+            width={300}
+            height={300}
             priority
             loading="eager"
           />
