@@ -54,7 +54,7 @@ export default function HistoryPage() {
   return (
     <>
       <div className="h-full w-full p-5 sm:p-0 mx-auto max-w-full sm:max-w-3xl">
-        <h1 className="text-4xl mb-16 font-semibold">Projects</h1>
+        <h1 className="text-4xl mb-24 font-semibold">Projects</h1>
 
         <ul>
           {projects.map(

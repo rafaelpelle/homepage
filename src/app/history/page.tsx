@@ -31,7 +31,7 @@ export default function HistoryPage() {
             ({ period, company, jobTitle, description, stack }) => (
               <motion.li
                 key={period}
-                className="mb-16"
+                className="mb-24"
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0.8 }}
