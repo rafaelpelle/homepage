@@ -1,5 +1,24 @@
+'use client';
+
 import { BackgroundPattern } from '@/components';
+import { Variants, motion } from 'framer-motion';
 import { workHistory } from './data';
+
+const variants: Variants = {
+  offscreen: {
+    opacity: 0,
+    x: 70,
+  },
+  onscreen: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 export default function HistoryPage() {
   return (
@@ -10,7 +29,14 @@ export default function HistoryPage() {
         <ul>
           {workHistory.map(
             ({ period, company, jobTitle, description, stack }) => (
-              <li key={period} className="mb-16">
+              <motion.li
+                key={period}
+                className="mb-16"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+                variants={variants}
+              >
                 <div className="grid sm:grid-cols-8 sm:gap-8">
                   <p className="whitespace-nowrap sm:col-span-2 mb-3 text-sm text-slate-400">
                     {period}
@@ -29,7 +55,7 @@ export default function HistoryPage() {
                     ))}
                   </div>
                 </div>
-              </li>
+              </motion.li>
             ),
           )}
         </ul>

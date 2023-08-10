@@ -9,11 +9,11 @@ import { projects } from './data';
 const variants: Variants = {
   offscreen: {
     opacity: 0,
-    y: 100,
+    x: 50,
   },
   onscreen: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
       type: 'spring',
       bounce: 0.4,
@@ -61,7 +61,7 @@ export default function HistoryPage() {
             ({ title, description, githubURL, liveAtURL }, index) => (
               <motion.li
                 key={title}
-                className="mb-32 grid grid-cols-12 gap-4"
+                className="mb-16 grid grid-cols-12 gap-4"
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0.8 }}
