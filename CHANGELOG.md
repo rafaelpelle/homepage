@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/rafaelpelle/homepage/compare/v1.9.4...v1.10.0) (2023-08-10)
+
+
+### Bug Fixes
+
+* animation ([7934844](https://github.com/rafaelpelle/homepage/commit/7934844f8c9c29d229540a560f2612d25c46b449))
+
+
+### Features
+
+* animate HistoryPage ([1bc68a7](https://github.com/rafaelpelle/homepage/commit/1bc68a79d779f17c4cca2726af208720158057c1))
+
 ## [1.9.4](https://github.com/rafaelpelle/homepage/compare/v1.9.3...v1.9.4) (2023-08-10)
 
 
