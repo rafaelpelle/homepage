@@ -9,7 +9,7 @@ import { projects } from './data';
 const variants: Variants = {
   offscreen: {
     opacity: 0,
-    x: 50,
+    x: 70,
   },
   onscreen: {
     opacity: 1,
