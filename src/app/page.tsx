@@ -18,6 +18,7 @@ export default function IndexPage() {
             alt="Rafael Pelle picture"
             src={rafaelPictureSrc}
             priority
+            loading="eager"
           />
           <div className="container flex flex-col items-center sm:items-start mt-5 sm:ml-5">
             <AnimatedFullName />
