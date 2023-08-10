@@ -1,11 +1,16 @@
 import rafaelPictureSrc from '@/../public/images/profile.jpg';
 import { AnimatedFullName, BackgroundPattern } from '@/components';
 import ChatContainer from '@/components/ChatContainer';
+import Head from 'next/head';
 import Image from 'next/image';
 
 export default function IndexPage() {
   return (
     <>
+      <Head>
+        <link rel="preload" href="/images/profile.jpg" as="image" />
+      </Head>
+
       <div className="flex flex-col justify-evenly sm:justify-between h-full w-full p-3 mx-auto max-w-full sm:max-w-4xl relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-20">
           <Image
