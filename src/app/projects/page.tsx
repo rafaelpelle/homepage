@@ -1,7 +1,26 @@
+'use client';
+
 import { BackgroundPattern, GitHubIcon, RedirectIcon } from '@/components';
+import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from './data';
+
+const variants: Variants = {
+  offscreen: {
+    opacity: 0,
+    y: 100,
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 interface RenderProjectImageProps {
   title: string;
@@ -40,7 +59,14 @@ export default function HistoryPage() {
         <ul>
           {projects.map(
             ({ title, description, githubURL, liveAtURL }, index) => (
-              <li key={title} className="mb-24 grid grid-cols-12 gap-4">
+              <motion.li
+                key={title}
+                className="mb-32 grid grid-cols-12 gap-4"
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.8 }}
+                variants={variants}
+              >
                 <div className="col-span-12 sm:col-span-6">
                   <label className="swap h-full w-full">
                     <input type="checkbox" />
@@ -72,7 +98,7 @@ export default function HistoryPage() {
                     )}
                   </div>
                 </div>
-              </li>
+              </motion.li>
             ),
           )}
         </ul>
