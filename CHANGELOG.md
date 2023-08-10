@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/rafaelpelle/homepage/compare/v1.9.1...v1.9.2) (2023-08-10)
+
+
+### Bug Fixes
+
+* IndexPage image optmization ([bed3e07](https://github.com/rafaelpelle/homepage/commit/bed3e070ab77917e810b760b05f2bbc68b031fc0))
+
 ## [1.9.1](https://github.com/rafaelpelle/homepage/compare/v1.9.0...v1.9.1) (2023-08-10)
 
 
