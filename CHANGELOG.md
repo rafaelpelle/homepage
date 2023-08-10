@@ -1,3 +1,11 @@
+# [1.9.0](https://github.com/rafaelpelle/homepage/compare/v1.8.0...v1.9.0) (2023-08-10)
+
+
+### Features
+
+* add motion to Projects page ([cf7b4ab](https://github.com/rafaelpelle/homepage/commit/cf7b4ab91720c3abcfa7789169cd85a0f9d3db48))
+* Projects page ([0a254de](https://github.com/rafaelpelle/homepage/commit/0a254de747da94e8fe4f0aaab2038b5263fabc13))
+
 # [1.8.0](https://github.com/rafaelpelle/homepage/compare/v1.7.0...v1.8.0) (2023-08-09)
 
 
