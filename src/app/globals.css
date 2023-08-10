@@ -9,7 +9,7 @@
     --background-end-rgb: 0, 0, 0;
 }
 
-body {
+html, body {
   box-sizing: border-box !important;
   max-width: 100%;
   overflow-x: hidden;
