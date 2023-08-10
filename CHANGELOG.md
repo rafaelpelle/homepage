@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/rafaelpelle/homepage/compare/v1.10.0...v1.11.0) (2023-08-10)
+
+
+### Features
+
+* more content on ProjectsPage ([7194613](https://github.com/rafaelpelle/homepage/commit/71946134a8db3bd53de5eef53243a856b978a2a5))
+
 # [1.10.0](https://github.com/rafaelpelle/homepage/compare/v1.9.4...v1.10.0) (2023-08-10)
 
 
