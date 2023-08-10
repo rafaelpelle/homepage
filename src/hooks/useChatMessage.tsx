@@ -1,3 +1,5 @@
+'use client';
+
 import {
   AboutCareerResponse,
   GetInTouchResponse,
@@ -5,13 +7,7 @@ import {
 } from '@/components';
 import { ChatMessageProps } from '@/components/ChatMessage';
 import { QuestionMenuItemProps } from '@/components/QuestionMenu/QuestionMenuItem';
-import {
-  MutableRefObject,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react';
+import { ReactNode, useCallback, useEffect, useState } from 'react';
 
 export type ChatQuestion =
   | 'Can you tell me about your career?'
@@ -42,9 +38,7 @@ const responseTemplate: ChatMessageProps = {
   imgSrc: '/images/guest_profile.png',
 };
 
-export function useChatMessage(
-  messagesEndRef: MutableRefObject<null | HTMLDivElement>,
-) {
+export function useChatMessage() {
   const [messages, setMessages] = useState<ChatMessageProps[]>([]);
   const [isTyping, setIsTyping] = useState<boolean>(true);
   const [questions, setQuestions] = useState<QuestionMenuItemProps[]>([]);
@@ -90,8 +84,10 @@ export function useChatMessage(
   );
 
   const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messagesEndRef]);
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {

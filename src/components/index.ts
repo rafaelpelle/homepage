@@ -1,4 +1,5 @@
 import AboutCareerResponse from './AboutCareerResponse';
+import AnimatedFullName from './AnimatedFullName';
 import AnimatedLetter from './AnimatedLetter';
 import BackgroundPattern from './BackgroundPattern';
 import ChatLoading from './ChatLoading';
@@ -17,6 +18,7 @@ import ShowProjectsResponse from './ShowProjectsResponse';
 
 export {
   AboutCareerResponse,
+  AnimatedFullName,
   AnimatedLetter,
   BackgroundPattern,
   ChatLoading,
