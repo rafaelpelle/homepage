@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/rafaelpelle/homepage/compare/v1.12.0...v1.13.0) (2023-08-11)
+
+
+### Features
+
+* IndexPage profile img placeholder ([a445c45](https://github.com/rafaelpelle/homepage/commit/a445c45143598813b630d0be68b75b4f035be6e4))
+
 # [1.12.0](https://github.com/rafaelpelle/homepage/compare/v1.11.0...v1.12.0) (2023-08-11)
 
 
