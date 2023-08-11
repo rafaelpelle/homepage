@@ -2,14 +2,9 @@ import { useTranslation } from '@/app/i18n';
 import { Language } from '@/app/i18n/settings';
 import { AnimatedFullName, BackgroundPattern } from '@/components';
 import ChatContainer from '@/components/ChatContainer';
-import { Metadata } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { blurDataURL } from './profileBlurDataURL';
-
-export const metadata: Metadata = {
-  title: 'My Page Title',
-};
 
 export interface IndexPageProps {
   params: {
@@ -43,7 +38,7 @@ export default async function IndexPage({ params: { lng } }: IndexPageProps) {
           <div className="container flex flex-col items-center sm:items-start mt-5 sm:ml-5">
             <AnimatedFullName />
             <p className="text-slate-500 sm:pl-2 text-center sm:text-left w-3/4 sm:w-full">
-              Front-end web developer specialized in React
+              {t('profile-subtitle')}
             </p>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import { Language, languages } from '@/app/i18n/settings';
-import { HamburgerIcon, RPLogo } from '@/components';
-import I18nIcon from '@/components/I18nIcon';
+import { HamburgerIcon, I18nDropdown, RPLogo } from '@/components';
 import { dir } from 'i18next';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
@@ -86,6 +85,16 @@ const MobileLayout = ({ children, params }: RootLayoutProps) => {
       <div className="drawer-side z-20">
         <label htmlFor="drawer" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 h-full bg-base-300 text-base-content">
+          <div className="ml-auto mb-5">
+            <I18nDropdown />
+          </div>
+
+          <li>
+            <Link prefetch={false} className={linkClassName} href={`/${lng}`}>
+              Home
+            </Link>
+          </li>
+
           <MenuListItems lng={lng} />
         </ul>
       </div>
@@ -109,23 +118,7 @@ const DesktopLayout = ({ children, params }: RootLayoutProps) => {
             <MenuListItems lng={lng} />
           </ul>
 
-          <details className="dropdown dropdown-end">
-            <summary className={`btn btn-ghost py-0 ${linkClassName}`}>
-              <I18nIcon />
-            </summary>
-            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-40">
-              <li>
-                <Link href="/pt" prefetch={false}>
-                  Português 🇧🇷
-                </Link>
-              </li>
-              <li>
-                <Link href="/en" prefetch={false}>
-                  English 🇬🇧
-                </Link>
-              </li>
-            </ul>
-          </details>
+          <I18nDropdown />
         </div>
       </div>
       {children}

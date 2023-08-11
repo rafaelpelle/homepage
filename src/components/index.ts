@@ -10,6 +10,8 @@ import GetInTouchResponse from './GetInTouchResponse';
 import GitHubIcon from './GitHubIcon';
 import GuestIcon from './GuestIcon';
 import HamburgerIcon from './HamburgerIcon';
+import I18nDropdown from './I18nDropdown';
+import I18nIcon from './I18nIcon';
 import QuestionMenu from './QuestionMenu';
 import QuestionMenuItem from './QuestionMenu/QuestionMenuItem';
 import RPLogo from './RPLogo';
@@ -29,6 +31,8 @@ export {
   GitHubIcon,
   GuestIcon,
   HamburgerIcon,
+  I18nDropdown,
+  I18nIcon,
   QuestionMenu,
   QuestionMenuItem,
   RPLogo,
