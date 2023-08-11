@@ -81,7 +81,7 @@ export function useChatMessage(lng: Language) {
         );
       }, 1500);
     },
-    [],
+    [rootResponses],
   );
 
   const scrollToBottom = useCallback(() => {

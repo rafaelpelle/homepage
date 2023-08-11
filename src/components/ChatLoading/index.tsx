@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export interface ChatLoadingProps {
   imgSrc?: string;
 }
 
 export default function ChatMessage({
-  imgSrc = "/images/profile.png",
+  imgSrc = '/images/profile.png',
 }: ChatLoadingProps) {
   return (
     <div className="chat chat-start mb-3 last:mb-0">
