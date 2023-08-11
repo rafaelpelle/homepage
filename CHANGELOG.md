@@ -1,3 +1,10 @@
+## [1.13.7](https://github.com/rafaelpelle/homepage/compare/v1.13.6...v1.13.7) (2023-08-11)
+
+
+### Bug Fixes
+
+* trying to fix images not found ([d4db701](https://github.com/rafaelpelle/homepage/commit/d4db701b8a562eda35eb25048a23461aa31884d0))
+
 ## [1.13.6](https://github.com/rafaelpelle/homepage/compare/v1.13.5...v1.13.6) (2023-08-11)
 
 
