@@ -98,11 +98,16 @@ export default function HistoryPage({ params: { lng } }: ProjectsPageProps) {
                     {description}
                   </p>
                   <div className="flex text-primary">
-                    <Link className="mr-3" href={githubURL} target="_blank">
+                    <Link
+                      className="mr-3"
+                      href={githubURL}
+                      prefetch={false}
+                      target="_blank"
+                    >
                       <GitHubIcon />
                     </Link>
                     {liveAtURL && (
-                      <Link href={liveAtURL} target="_blank">
+                      <Link href={liveAtURL} prefetch={false} target="_blank">
                         <RedirectIcon />
                       </Link>
                     )}

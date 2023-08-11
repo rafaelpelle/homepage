@@ -13,6 +13,7 @@ export default function AboutCareerResponse({ lng }: AboutCareerResponseProps) {
       <Link
         className="text-primary cursor-pointer"
         target="_blank"
+        prefetch={false}
         href="https://ufsc.br/"
       >
         UFSC
@@ -22,7 +23,11 @@ export default function AboutCareerResponse({ lng }: AboutCareerResponseProps) {
       since then. Between September 2021 and March 2023 I was working at an
       e-commerce and had some experience with Next.js, SEO, error monitoring...
       Wanna know more? Check my{' '}
-      <Link className="text-primary cursor-pointer" href={`/${lng}/history`}>
+      <Link
+        className="text-primary cursor-pointer"
+        href={`/${lng}/history`}
+        prefetch={false}
+      >
         Work History page.
       </Link>
     </Fragment>

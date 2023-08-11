@@ -2,9 +2,14 @@ import { useTranslation } from '@/app/i18n';
 import { Language } from '@/app/i18n/settings';
 import { AnimatedFullName, BackgroundPattern } from '@/components';
 import ChatContainer from '@/components/ChatContainer';
+import { Metadata } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { blurDataURL } from './profileBlurDataURL';
+
+export const metadata: Metadata = {
+  title: 'My Page Title',
+};
 
 export interface IndexPageProps {
   params: {

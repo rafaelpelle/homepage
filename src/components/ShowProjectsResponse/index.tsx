@@ -18,11 +18,12 @@ export default function ShowProjectsResponse({
         className="text-primary"
         target="_blank"
         href="https://amaro.com/br/pt/"
+        prefetch={false}
       >
         AMARO e-commerce
       </Link>{' '}
       and you will find my latest study projects on my{' '}
-      <Link className="text-primary" href={`/${lng}/projects`}>
+      <Link className="text-primary" href={`/${lng}/projects`} prefetch={false}>
         Projects page.
       </Link>
     </Fragment>

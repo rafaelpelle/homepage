@@ -49,6 +49,7 @@ const MenuListItems = ({ lng }: { lng: Language }) =>
   menuLinks.map(({ text, target, href }) => (
     <li key={href}>
       <Link
+        prefetch={false}
         className={linkClassName}
         target={target}
         href={href.startsWith('http') ? href : `/${lng}${href}`}
@@ -74,7 +75,7 @@ const MobileLayout = ({ children, params }: RootLayoutProps) => {
             <HamburgerIcon />
           </label>
 
-          <Link href={`/${lng}`}>
+          <Link href={`/${lng}`} prefetch={false}>
             <RPLogo />
           </Link>
         </div>
@@ -99,7 +100,7 @@ const DesktopLayout = ({ children, params }: RootLayoutProps) => {
     <div className="hidden sm:block relative z-10">
       <div className="navbar mb-5 px-5">
         <div className="flex-1">
-          <Link href={`/${lng}`}>
+          <Link href={`/${lng}`} prefetch={false}>
             <RPLogo />
           </Link>
         </div>
@@ -114,10 +115,14 @@ const DesktopLayout = ({ children, params }: RootLayoutProps) => {
             </summary>
             <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-40">
               <li>
-                <Link href="/pt">Português 🇧🇷</Link>
+                <Link href="/pt" prefetch={false}>
+                  Português 🇧🇷
+                </Link>
               </li>
               <li>
-                <Link href="/en">English 🇬🇧</Link>
+                <Link href="/en" prefetch={false}>
+                  English 🇬🇧
+                </Link>
               </li>
             </ul>
           </details>

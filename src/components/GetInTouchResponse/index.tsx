@@ -14,6 +14,7 @@ export default function GetInTouchResponse({ lng }: GetInTouchResponseProps) {
         className="text-primary cursor-pointer"
         target="_blank"
         href="mailto:rafapelle@gmail.com"
+        prefetch={false}
       >
         rafapelle@gmail.com
       </Link>{' '}
@@ -22,6 +23,7 @@ export default function GetInTouchResponse({ lng }: GetInTouchResponseProps) {
         className="text-primary cursor-pointer"
         target="_blank"
         href="https://www.linkedin.com/in/rafael-pelle-23429317a/"
+        prefetch={false}
       >
         LinkedIn!
       </Link>
