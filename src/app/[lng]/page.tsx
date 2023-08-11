@@ -1,3 +1,4 @@
+import profileSrc from '@/../public/images/profile.jpg';
 import { useTranslation } from '@/app/i18n';
 import { Language } from '@/app/i18n/settings';
 import { AnimatedFullName, BackgroundPattern } from '@/components';
@@ -27,7 +28,7 @@ export default async function IndexPage({ params: { lng } }: IndexPageProps) {
           <Image
             className="rounded-full bg-blur w-52 sm:w-72"
             alt="Rafael Pelle picture"
-            src="/images/profile.jpg"
+            src={profileSrc}
             width={300}
             height={300}
             priority
