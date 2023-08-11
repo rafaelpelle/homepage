@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslation } from '@/app/i18n/client';
 import { BackgroundPattern, GitHubIcon, RedirectIcon } from '@/components';
 import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
@@ -50,7 +51,15 @@ const RenderProjectImage = ({
   </div>
 );
 
-export default function HistoryPage() {
+export interface ProjectsPageProps {
+  params: {
+    lng: string;
+  };
+}
+
+export default function HistoryPage({ params: { lng } }: ProjectsPageProps) {
+  const { t } = useTranslation(lng, 'projects-page', undefined);
+
   return (
     <>
       <div className="h-full w-full p-5 sm:p-0 mx-auto max-w-full sm:max-w-3xl">

@@ -1,9 +1,19 @@
+import { useTranslation } from '@/app/i18n';
 import { AnimatedFullName, BackgroundPattern } from '@/components';
 import ChatContainer from '@/components/ChatContainer';
 import Head from 'next/head';
 import Image from 'next/image';
 
-export default function IndexPage() {
+export interface IndexPageProps {
+  params: {
+    lng: string;
+  };
+}
+
+export default async function IndexPage({ params: { lng } }: IndexPageProps) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = await useTranslation(lng, 'index-page');
+
   return (
     <>
       <Head>

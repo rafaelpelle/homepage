@@ -1,9 +1,16 @@
 import { HamburgerIcon, RPLogo } from '@/components';
+import { dir } from 'i18next';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import Link from 'next/link';
 import React from 'react';
+import { languages } from '../i18n/settings';
+
 import './globals.css';
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
 
 const font = Fira_Code({ subsets: ['latin'] });
 
@@ -15,6 +22,9 @@ export const metadata: Metadata = {
 
 export interface RootLayoutProps {
   children: React.ReactNode;
+  params: {
+    lng: string;
+  };
 }
 
 const linkClassName = 'text-primary hover:bg-primary hover:text-slate-900';
@@ -92,14 +102,16 @@ const DesktopLayout = ({ children }: RootLayoutProps) => (
   </div>
 );
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout(props: RootLayoutProps) {
+  const { lng } = props.params;
+
   return (
-    <html lang="en" data-theme="dark">
+    <html lang={lng} dir={dir(lng)} data-theme="dark">
       <body
         className={`${font.className} bg-base-100 min-h-screen h-max selection:bg-primary selection:text-black`}
       >
-        <MobileLayout>{children}</MobileLayout>
-        <DesktopLayout>{children}</DesktopLayout>
+        <MobileLayout {...props} />
+        <DesktopLayout {...props} />
       </body>
     </html>
   );

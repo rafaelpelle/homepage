@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslation } from '@/app/i18n/client';
 import { BackgroundPattern } from '@/components';
 import { Variants, motion } from 'framer-motion';
 import { workHistory } from './data';
@@ -20,7 +21,15 @@ const variants: Variants = {
   },
 };
 
-export default function HistoryPage() {
+export interface HistoryPageProps {
+  params: {
+    lng: string;
+  };
+}
+
+export default function HistoryPage({ params: { lng } }: HistoryPageProps) {
+  const { t } = useTranslation(lng, 'history-page', undefined);
+
   return (
     <>
       <div className="h-full w-full p-5 sm:p-0 mx-auto max-w-full sm:max-w-3xl">
