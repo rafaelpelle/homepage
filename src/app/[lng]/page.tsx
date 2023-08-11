@@ -4,6 +4,7 @@ import { AnimatedFullName, BackgroundPattern } from '@/components';
 import ChatContainer from '@/components/ChatContainer';
 import Head from 'next/head';
 import Image from 'next/image';
+import { blurDataURL } from './profileBlurDataURL';
 
 export interface IndexPageProps {
   params: {
@@ -31,6 +32,8 @@ export default async function IndexPage({ params: { lng } }: IndexPageProps) {
             height={300}
             priority
             loading="eager"
+            placeholder="blur"
+            blurDataURL={blurDataURL}
           />
           <div className="container flex flex-col items-center sm:items-start mt-5 sm:ml-5">
             <AnimatedFullName />
