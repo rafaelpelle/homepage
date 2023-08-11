@@ -23,7 +23,8 @@ export function middleware(req: any) {
   if (
     !languages.some((loc) => pathname.startsWith(`/${loc}`)) &&
     !pathname.startsWith('/_next') &&
-    !pathname.startsWith('/images')
+    !pathname.startsWith('/images') &&
+    !pathname.startsWith('/_ipx')
   ) {
     return NextResponse.redirect(new URL(`/${lng}${pathname}`, req.url));
   }
