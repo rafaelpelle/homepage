@@ -1,3 +1,16 @@
+# [1.14.0](https://github.com/rafaelpelle/homepage/compare/v1.13.7...v1.14.0) (2023-08-11)
+
+
+### Bug Fixes
+
+* remove link prefetch ([4394c7d](https://github.com/rafaelpelle/homepage/commit/4394c7d646ae489d2d039ada19228cb39e69f609))
+
+
+### Features
+
+* ChatContainer i18n ([8e56bd3](https://github.com/rafaelpelle/homepage/commit/8e56bd312e4c1758b73c6d997973521075cabadb))
+* IndexPage i18n ([4202064](https://github.com/rafaelpelle/homepage/commit/4202064fbde837a7debeb34fa02fca23ad334228))
+
 ## [1.13.7](https://github.com/rafaelpelle/homepage/compare/v1.13.6...v1.13.7) (2023-08-11)
 
 
