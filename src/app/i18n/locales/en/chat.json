@@ -1,0 +1,18 @@
+{
+  "about-career": "Can you tell me about your career?",
+  "about-projects": "Can you show me your projects?",
+  "contact": "How do I get in touch with you?",
+  "hi": "Hi,",
+  "myself": "I'm Rafael Pelle!",
+  "question-or-menu": "You can ask me a question, or navigate through the menu.",
+  "questions": "questions",
+  "about-career-part1": "I did computer science at ",
+  "about-career-part2": " between 2013 and 2019. My first full-time job as front-end developer was May 2018, and I've been working with React, Redux, TypeScript...since then. Between September 2021 and March 2023 I was working at an e-commerce and had some experience with Next.js, SEO, error monitoring... Wanna know more? Check my ",
+  "work-history-page": "Work History page.",
+  "about-projects-part1": "Honestly, there is not much to show... yet...just some study projects, because most of my work experience was for companies developing private projects. I can show you the ",
+  "about-projects-part2": " and you will find my latest study projects on my ",
+  "amaro-ecommerce": "AMARO e-commerce",
+  "projects-page": "Projects page.",
+  "send-email": "You can send an e-mail to ",
+  "send-message": " or a message on my "
+}

@@ -1,3 +1,4 @@
+import { useTranslation } from '@/app/i18n/client';
 import { Language } from '@/app/i18n/settings';
 import Link from 'next/link';
 import { Fragment } from 'react';
@@ -9,22 +10,22 @@ export interface ShowProjectsResponseProps {
 export default function ShowProjectsResponse({
   lng,
 }: ShowProjectsResponseProps) {
+  const { t } = useTranslation(lng, 'chat', undefined);
+
   return (
     <Fragment>
-      Honestly, there&apos;s not much to show... yet...just some study projects,
-      because most of my work experience was for companies developing private
-      projects. I can show you the{' '}
+      {t('about-projects-part1')}
       <Link
         className="text-primary"
         target="_blank"
         href="https://amaro.com/br/pt/"
         prefetch={false}
       >
-        AMARO e-commerce
-      </Link>{' '}
-      and you will find my latest study projects on my{' '}
+        {t('amaro-ecommerce')}
+      </Link>
+      {t('about-projects-part2')}
       <Link className="text-primary" href={`/${lng}/projects`} prefetch={false}>
-        Projects page.
+        {t('projects-page')}
       </Link>
     </Fragment>
   );

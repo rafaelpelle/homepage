@@ -1,3 +1,4 @@
+import { useTranslation } from '@/app/i18n/client';
 import { Language } from '@/app/i18n/settings';
 import Link from 'next/link';
 import { Fragment } from 'react';
@@ -7,9 +8,11 @@ export interface GetInTouchResponseProps {
 }
 
 export default function GetInTouchResponse({ lng }: GetInTouchResponseProps) {
+  const { t } = useTranslation(lng, 'chat', undefined);
+
   return (
     <Fragment>
-      You can send an e-mail to{' '}
+      {t('send-email')}
       <Link
         className="text-primary cursor-pointer"
         target="_blank"
@@ -18,7 +21,7 @@ export default function GetInTouchResponse({ lng }: GetInTouchResponseProps) {
       >
         rafapelle@gmail.com
       </Link>{' '}
-      or a message on{' '}
+      {t('send-message')}
       <Link
         className="text-primary cursor-pointer"
         target="_blank"

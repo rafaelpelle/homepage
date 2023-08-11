@@ -1,3 +1,4 @@
+import { useTranslation } from '@/app/i18n/client';
 import { Language } from '@/app/i18n/settings';
 import Link from 'next/link';
 import { Fragment } from 'react';
@@ -7,9 +8,11 @@ export interface AboutCareerResponseProps {
 }
 
 export default function AboutCareerResponse({ lng }: AboutCareerResponseProps) {
+  const { t } = useTranslation(lng, 'chat', undefined);
+
   return (
     <Fragment>
-      I did computer science at{' '}
+      {t('about-career-part1')}
       <Link
         className="text-primary cursor-pointer"
         target="_blank"
@@ -17,18 +20,14 @@ export default function AboutCareerResponse({ lng }: AboutCareerResponseProps) {
         href="https://ufsc.br/"
       >
         UFSC
-      </Link>{' '}
-      between 2013 and 2019. My first full-time job as front-end developer was
-      May 2018, and I&apos;ve been working with React, Redux, TypeScript...
-      since then. Between September 2021 and March 2023 I was working at an
-      e-commerce and had some experience with Next.js, SEO, error monitoring...
-      Wanna know more? Check my{' '}
+      </Link>
+      {t('about-career-part2')}
       <Link
         className="text-primary cursor-pointer"
         href={`/${lng}/history`}
         prefetch={false}
       >
-        Work History page.
+        {t('work-history-page')}
       </Link>
     </Fragment>
   );

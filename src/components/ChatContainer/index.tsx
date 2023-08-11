@@ -19,7 +19,7 @@ export default function ChatContainer({ lng }: ChatContainerProps) {
       {isTyping && <ChatLoading />}
 
       {!isTyping && questions.length > 0 && (
-        <QuestionMenu questions={questions} />
+        <QuestionMenu questions={questions} lng={lng} />
       )}
     </div>
   );

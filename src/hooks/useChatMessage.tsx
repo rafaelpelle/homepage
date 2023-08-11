@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslation } from '@/app/i18n/client';
 import { Language } from '@/app/i18n/settings';
 import {
   AboutCareerResponse,
@@ -8,24 +9,7 @@ import {
 } from '@/components';
 import { ChatMessageProps } from '@/components/ChatMessage';
 import { QuestionMenuItemProps } from '@/components/QuestionMenu/QuestionMenuItem';
-import { ReactNode, useCallback, useEffect, useState } from 'react';
-
-export type ChatQuestion =
-  | 'Can you tell me about your career?'
-  | 'Can you show me your projects?'
-  | 'How do I get in touch with you?';
-
-const rootMessages: ChatMessageProps[] = [
-  { text: 'Hi,' },
-  { text: "I'm Rafael Pelle!" },
-  { text: 'You can ask me a question, or navigate through the menu.' },
-];
-
-const rootQuestions: ChatQuestion[] = [
-  'Can you tell me about your career?',
-  'Can you show me your projects?',
-  'How do I get in touch with you?',
-];
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 const responseTemplate: ChatMessageProps = {
   text: '',
@@ -38,11 +22,30 @@ export function useChatMessage(lng: Language) {
   const [isTyping, setIsTyping] = useState<boolean>(true);
   const [questions, setQuestions] = useState<QuestionMenuItemProps[]>([]);
 
-  const rootResponses: ReactNode[] = [
-    <AboutCareerResponse key="AboutCareerResponse" lng={lng} />,
-    <ShowProjectsResponse key="ShowProjectsResponse" lng={lng} />,
-    <GetInTouchResponse key="GetInTouchResponse" lng={lng} />,
-  ];
+  const { t } = useTranslation(lng, 'chat', undefined);
+
+  const rootMessages: ChatMessageProps[] = useMemo(
+    () => [
+      { text: t('hi') },
+      { text: t('myself') },
+      { text: t('question-or-menu') },
+    ],
+    [t],
+  );
+
+  const rootQuestions: string[] = useMemo(
+    () => [t('about-career'), t('about-projects'), t('contact')],
+    [t],
+  );
+
+  const rootResponses = useMemo(
+    () => [
+      <AboutCareerResponse key="AboutCareerResponse" lng={lng} />,
+      <ShowProjectsResponse key="ShowProjectsResponse" lng={lng} />,
+      <GetInTouchResponse key="GetInTouchResponse" lng={lng} />,
+    ],
+    [lng],
+  );
 
   const closeQuestionDropdown = () => {
     const dropdown = document.activeElement as HTMLElement;
@@ -51,13 +54,16 @@ export function useChatMessage(lng: Language) {
     }
   };
 
-  const getQuestionMessage = (index: number) => ({
-    ...responseTemplate,
-    text: rootQuestions[index],
-  });
+  const getQuestionMessage = useCallback(
+    (index: number) => ({
+      ...responseTemplate,
+      text: rootQuestions[index],
+    }),
+    [rootQuestions],
+  );
 
   const questionClickHandler = useCallback(
-    (question: ChatQuestion, msgs: ChatMessageProps[]) => {
+    (question: string, msgs: ChatMessageProps[]) => {
       const index = rootQuestions.indexOf(question);
       closeQuestionDropdown();
       const newMessages = [...msgs, getQuestionMessage(index)];
@@ -81,7 +87,7 @@ export function useChatMessage(lng: Language) {
         );
       }, 1500);
     },
-    [rootResponses],
+    [getQuestionMessage, rootQuestions, rootResponses],
   );
 
   const scrollToBottom = useCallback(() => {
@@ -114,7 +120,7 @@ export function useChatMessage(lng: Language) {
     return () => {
       clearInterval(interval);
     };
-  }, [messages, questionClickHandler]);
+  }, [messages, questionClickHandler, rootMessages, rootQuestions]);
 
   useEffect(() => {
     if (messages.length >= 2) {
