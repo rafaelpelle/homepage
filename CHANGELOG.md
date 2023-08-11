@@ -1,3 +1,15 @@
+# [1.12.0](https://github.com/rafaelpelle/homepage/compare/v1.11.0...v1.12.0) (2023-08-11)
+
+
+### Bug Fixes
+
+* i18n links ([22ac642](https://github.com/rafaelpelle/homepage/commit/22ac6427f03b4f7828d44dfb51bbc2ec88b4d114))
+
+
+### Features
+
+* i18n structure ([064c261](https://github.com/rafaelpelle/homepage/commit/064c2610942b9d6fcc43e997cd4a8701ca16ab72))
+
 # [1.11.0](https://github.com/rafaelpelle/homepage/compare/v1.10.0...v1.11.0) (2023-08-10)
 
 
