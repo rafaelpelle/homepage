@@ -1,4 +1,5 @@
 import { useTranslation } from '@/app/i18n';
+import { Language } from '@/app/i18n/settings';
 import { AnimatedFullName, BackgroundPattern } from '@/components';
 import ChatContainer from '@/components/ChatContainer';
 import Head from 'next/head';
@@ -6,7 +7,7 @@ import Image from 'next/image';
 
 export interface IndexPageProps {
   params: {
-    lng: string;
+    lng: Language;
   };
 }
 
@@ -39,7 +40,7 @@ export default async function IndexPage({ params: { lng } }: IndexPageProps) {
           </div>
         </div>
 
-        <ChatContainer />
+        <ChatContainer lng={lng} />
       </div>
 
       <div className="absolute top-10 sm:top-60 left-0 sm:-rotate-90">

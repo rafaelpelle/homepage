@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslation } from '@/app/i18n/client';
+import { Language } from '@/app/i18n/settings';
 import { BackgroundPattern, GitHubIcon, RedirectIcon } from '@/components';
 import { Variants, motion } from 'framer-motion';
 import Image from 'next/image';
@@ -53,7 +54,7 @@ const RenderProjectImage = ({
 
 export interface ProjectsPageProps {
   params: {
-    lng: string;
+    lng: Language;
   };
 }
 

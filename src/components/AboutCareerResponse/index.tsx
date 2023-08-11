@@ -1,7 +1,12 @@
+import { Language } from '@/app/i18n/settings';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-export default function AboutCareerResponse() {
+export interface AboutCareerResponseProps {
+  lng: Language;
+}
+
+export default function AboutCareerResponse({ lng }: AboutCareerResponseProps) {
   return (
     <Fragment>
       I did computer science at{' '}
@@ -17,7 +22,7 @@ export default function AboutCareerResponse() {
       since then. Between September 2021 and March 2023 I was working at an
       e-commerce and had some experience with Next.js, SEO, error monitoring...
       Wanna know more? Check my{' '}
-      <Link className="text-primary cursor-pointer" href="/history">
+      <Link className="text-primary cursor-pointer" href={`/${lng}/history`}>
         Work History page.
       </Link>
     </Fragment>

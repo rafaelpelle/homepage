@@ -1,7 +1,12 @@
+import { Language } from '@/app/i18n/settings';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-export default function GetInTouchResponse() {
+export interface GetInTouchResponseProps {
+  lng: Language;
+}
+
+export default function GetInTouchResponse({ lng }: GetInTouchResponseProps) {
   return (
     <Fragment>
       You can send an e-mail to{' '}

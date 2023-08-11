@@ -1,10 +1,15 @@
 'use client';
 
+import { Language } from '@/app/i18n/settings';
 import { ChatLoading, ChatMessage, QuestionMenu } from '@/components';
 import { useChatMessage } from '@/hooks/useChatMessage';
 
-export default function ChatContainer() {
-  const { messages, isTyping, questions } = useChatMessage();
+export interface ChatContainerProps {
+  lng: Language;
+}
+
+export default function ChatContainer({ lng }: ChatContainerProps) {
+  const { messages, isTyping, questions } = useChatMessage(lng);
 
   return (
     <div className="w-12/12">

@@ -1,5 +1,6 @@
 'use client';
 
+import { Language } from '@/app/i18n/settings';
 import {
   AboutCareerResponse,
   GetInTouchResponse,
@@ -26,22 +27,22 @@ const rootQuestions: ChatQuestion[] = [
   'How do I get in touch with you?',
 ];
 
-const rootResponses: ReactNode[] = [
-  <AboutCareerResponse key="AboutCareerResponse" />,
-  <ShowProjectsResponse key="ShowProjectsResponse" />,
-  <GetInTouchResponse key="GetInTouchResponse" />,
-];
-
 const responseTemplate: ChatMessageProps = {
   text: '',
   align: 'end',
   imgSrc: '/images/guest_profile.png',
 };
 
-export function useChatMessage() {
+export function useChatMessage(lng: Language) {
   const [messages, setMessages] = useState<ChatMessageProps[]>([]);
   const [isTyping, setIsTyping] = useState<boolean>(true);
   const [questions, setQuestions] = useState<QuestionMenuItemProps[]>([]);
+
+  const rootResponses: ReactNode[] = [
+    <AboutCareerResponse key="AboutCareerResponse" lng={lng} />,
+    <ShowProjectsResponse key="ShowProjectsResponse" lng={lng} />,
+    <GetInTouchResponse key="GetInTouchResponse" lng={lng} />,
+  ];
 
   const closeQuestionDropdown = () => {
     const dropdown = document.activeElement as HTMLElement;

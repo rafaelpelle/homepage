@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslation } from '@/app/i18n/client';
+import { Language } from '@/app/i18n/settings';
 import { BackgroundPattern } from '@/components';
 import { Variants, motion } from 'framer-motion';
 import { workHistory } from './data';
@@ -23,7 +24,7 @@ const variants: Variants = {
 
 export interface HistoryPageProps {
   params: {
-    lng: string;
+    lng: Language;
   };
 }
 
