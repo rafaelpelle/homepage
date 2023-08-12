@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/rafaelpelle/homepage/compare/v1.14.0...v1.15.0) (2023-08-12)
+
+
+### Features
+
+* i18n toast ([fd16885](https://github.com/rafaelpelle/homepage/commit/fd168856a4ad558203560bf720d6a9fb3dd67ab5))
+
 # [1.14.0](https://github.com/rafaelpelle/homepage/compare/v1.13.7...v1.14.0) (2023-08-11)
 
 
