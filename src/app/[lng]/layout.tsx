@@ -1,5 +1,5 @@
 import { Language, languages } from '@/app/i18n/settings';
-import { HamburgerIcon, I18nDropdown, RPLogo } from '@/components';
+import { HamburgerIcon, I18nDropdown, I18nToast, RPLogo } from '@/components';
 import { dir } from 'i18next';
 import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
@@ -136,6 +136,8 @@ export default function RootLayout(props: RootLayoutProps) {
       >
         <MobileLayout {...props} />
         <DesktopLayout {...props} />
+
+        <I18nToast />
       </body>
     </html>
   );

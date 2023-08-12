@@ -21,7 +21,7 @@ export default function I18nToast() {
         animate={{ opacity: 1 }}
         className="absolute toast toast-top toast-start sm:toast-end mt-10 z-50"
       >
-        <div className="alert alert-info flex flex-col">
+        <div className="alert alert-info flex flex-col gap-0">
           <button
             className="absolute right-5 top-5 ml-auto"
             onClick={() => {
@@ -34,7 +34,7 @@ export default function I18nToast() {
           <p className="w-32 whitespace-break-spaces">
             First time? You can change the language here!
           </p>
-          -------------
+          ---------------
           <p className="w-32 whitespace-break-spaces">
             Primeira vez? Você pode trocar o idioma aqui!
           </p>

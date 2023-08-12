@@ -12,6 +12,7 @@ import GuestIcon from './GuestIcon';
 import HamburgerIcon from './HamburgerIcon';
 import I18nDropdown from './I18nDropdown';
 import I18nIcon from './I18nIcon';
+import I18nToast from './I18nToast';
 import QuestionMenu from './QuestionMenu';
 import QuestionMenuItem from './QuestionMenu/QuestionMenuItem';
 import RPLogo from './RPLogo';
@@ -33,6 +34,7 @@ export {
   HamburgerIcon,
   I18nDropdown,
   I18nIcon,
+  I18nToast,
   QuestionMenu,
   QuestionMenuItem,
   RPLogo,

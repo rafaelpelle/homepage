@@ -2,7 +2,7 @@ import { useTranslation } from '@/app/i18n';
 import { Language } from '@/app/i18n/settings';
 import { AnimatedFullName, BackgroundPattern } from '@/components';
 import ChatContainer from '@/components/ChatContainer';
-import I18nToast from '@/components/I18nToast';
+// import I18nToast from '@/components/I18nToast';
 import Image from 'next/image';
 import { blurDataURL } from './profileBlurDataURL';
 
@@ -18,7 +18,7 @@ export default async function IndexPage({ params: { lng } }: IndexPageProps) {
 
   return (
     <>
-      <I18nToast />
+      {/* <I18nToast /> */}
 
       <div className="flex flex-col justify-evenly sm:justify-between h-full w-full p-3 mx-auto max-w-full sm:max-w-4xl relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-20">
