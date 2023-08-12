@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/rafaelpelle/homepage/compare/v1.15.0...v1.15.1) (2023-08-12)
+
+
+### Bug Fixes
+
+* i18n toast ([b63b47c](https://github.com/rafaelpelle/homepage/commit/b63b47c4878ebebe73144431bbb23220d131ba90))
+
 # [1.15.0](https://github.com/rafaelpelle/homepage/compare/v1.14.0...v1.15.0) (2023-08-12)
 
 
