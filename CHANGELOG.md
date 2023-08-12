@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/rafaelpelle/homepage/compare/v1.15.1...v1.16.0) (2023-08-12)
+
+
+### Features
+
+* i18n in layout component ([e8083d8](https://github.com/rafaelpelle/homepage/commit/e8083d8dec9d9d67307bc88983bfcb992b6d1f6d))
+
 ## [1.15.1](https://github.com/rafaelpelle/homepage/compare/v1.15.0...v1.15.1) (2023-08-12)
 
 
