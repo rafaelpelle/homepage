@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import Link from 'next/link';
 import React from 'react';
+import { useTranslation } from '../i18n';
 import './globals.css';
 
 export async function generateStaticParams() {
@@ -30,11 +31,11 @@ const linkClassName = 'text-primary hover:bg-primary hover:text-slate-900';
 
 const menuLinks = [
   {
-    text: 'Work History',
+    text: 'work-history',
     href: '/history',
   },
   {
-    text: 'Projects',
+    text: 'projects',
     href: '/projects',
   },
   {
@@ -44,8 +45,11 @@ const menuLinks = [
   },
 ];
 
-const MenuListItems = ({ lng }: { lng: Language }) =>
-  menuLinks.map(({ text, target, href }) => (
+const MenuListItems = async ({ lng }: { lng: Language }) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = await useTranslation(lng, 'layout');
+
+  return menuLinks.map(({ text, target, href }) => (
     <li key={href}>
       <Link
         prefetch={false}
@@ -53,13 +57,16 @@ const MenuListItems = ({ lng }: { lng: Language }) =>
         target={target}
         href={href.startsWith('http') ? href : `/${lng}${href}`}
       >
-        {text}
+        {t(text)}
       </Link>
     </li>
   ));
+};
 
-const MobileLayout = ({ children, params }: RootLayoutProps) => {
+const MobileLayout = async ({ children, params }: RootLayoutProps) => {
   const { lng } = params;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = await useTranslation(lng, 'layout');
 
   return (
     <div className="drawer sm:hidden min-h-screen relative z-10">
@@ -91,7 +98,7 @@ const MobileLayout = ({ children, params }: RootLayoutProps) => {
 
           <li>
             <Link prefetch={false} className={linkClassName} href={`/${lng}`}>
-              Home
+              {t('home')}
             </Link>
           </li>
 
