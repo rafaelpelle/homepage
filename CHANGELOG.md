@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/rafaelpelle/homepage/compare/v1.18.0...v1.19.0) (2023-08-16)
+
+
+### Features
+
+* download CV ([9049337](https://github.com/rafaelpelle/homepage/commit/90493376d45475897a699a40e98134638c306460))
+
 # [1.18.0](https://github.com/rafaelpelle/homepage/compare/v1.17.0...v1.18.0) (2023-08-16)
 
 
