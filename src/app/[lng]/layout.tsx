@@ -43,6 +43,11 @@ const menuLinks = [
     href: 'https://github.com/rafaelpelle/',
     target: '_blank',
   },
+  {
+    text: 'cv',
+    href: '/cv.pdf',
+    target: '_blank',
+  },
 ];
 
 const MenuListItems = async ({ lng }: { lng: Language }) => {

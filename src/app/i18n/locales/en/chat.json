@@ -1,6 +1,7 @@
 {
   "about-career": "Can you tell me about your career?",
   "about-projects": "Can you show me your projects?",
+  "get-cv": "How can I download your resume?",
   "contact": "How do I get in touch with you?",
   "hi": "Hi,",
   "myself": "I'm Rafael Pelle!",
@@ -14,5 +15,7 @@
   "amaro-ecommerce": "AMARO e-commerce",
   "projects-page": "Projects page.",
   "send-email": "You can send an e-mail to ",
-  "send-message": " or a message on my "
+  "send-message": " or a message on my ",
+  "about-cv": "If you want to download my resume, click ",
+  "here": "here."
 }

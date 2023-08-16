@@ -1,6 +1,7 @@
 {
   "about-career": "Pode me contar mais sobre a sua carreira?",
   "about-projects": "Pode me mostrar seus projetos?",
+  "get-cv": "Como posso baixar o seu currículo?",
   "contact": "Como eu entro em contato com você?",
   "hi": "Olá,",
   "myself": "Eu sou o Rafael Pelle!",
@@ -14,5 +15,7 @@
   "amaro-ecommerce": "e-commerce da AMARO",
   "projects-page": "página de Projetos.",
   "send-email": "Você pode mandar um e-mail para ",
-  "send-message": " ou uma mensagem no meu "
+  "send-message": " ou uma mensagem no meu ",
+  "about-cv": "Se você quer baixar o meu currículo, clique ",
+  "here": "aqui."
 }

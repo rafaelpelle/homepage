@@ -6,6 +6,7 @@ import ChatLoading from './ChatLoading';
 import ChatMessage from './ChatMessage';
 import CloseIcon from './CloseIcon';
 import DoubleCheckIcon from './DoubleCheckIcon';
+import DownloadCVResponse from './DownloadCVResponse';
 import GetInTouchResponse from './GetInTouchResponse';
 import GitHubIcon from './GitHubIcon';
 import GuestIcon from './GuestIcon';
@@ -28,6 +29,7 @@ export {
   ChatMessage,
   CloseIcon,
   DoubleCheckIcon,
+  DownloadCVResponse,
   GetInTouchResponse,
   GitHubIcon,
   GuestIcon,

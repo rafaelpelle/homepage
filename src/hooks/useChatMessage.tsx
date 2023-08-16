@@ -4,6 +4,7 @@ import { useTranslation } from '@/app/i18n/client';
 import { Language } from '@/app/i18n/settings';
 import {
   AboutCareerResponse,
+  DownloadCVResponse,
   GetInTouchResponse,
   ShowProjectsResponse,
 } from '@/components';
@@ -34,7 +35,7 @@ export function useChatMessage(lng: Language) {
   );
 
   const rootQuestions: string[] = useMemo(
-    () => [t('about-career'), t('about-projects'), t('contact')],
+    () => [t('about-career'), t('about-projects'), t('get-cv'), t('contact')],
     [t],
   );
 
@@ -42,6 +43,7 @@ export function useChatMessage(lng: Language) {
     () => [
       <AboutCareerResponse key="AboutCareerResponse" lng={lng} />,
       <ShowProjectsResponse key="ShowProjectsResponse" lng={lng} />,
+      <DownloadCVResponse key="ShowProjectsResponse" lng={lng} />,
       <GetInTouchResponse key="GetInTouchResponse" lng={lng} />,
     ],
     [lng],
