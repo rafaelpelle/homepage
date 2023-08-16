@@ -58,13 +58,13 @@ export interface ProjectsPageProps {
   };
 }
 
-export default function HistoryPage({ params: { lng } }: ProjectsPageProps) {
+export default function ProjectsPage({ params: { lng } }: ProjectsPageProps) {
   const { t } = useTranslation(lng, 'projects-page', undefined);
 
   return (
     <>
       <div className="h-full w-full p-5 sm:p-0 mx-auto max-w-full sm:max-w-3xl">
-        <h1 className="text-4xl mb-24 font-semibold">Projects</h1>
+        <h1 className="text-4xl mb-24 font-semibold">{t('title')}</h1>
 
         <ul>
           {projects.map(
@@ -95,7 +95,7 @@ export default function HistoryPage({ params: { lng } }: ProjectsPageProps) {
                 <div className="col-span-12 sm:col-span-6 flex flex-col justify-between">
                   <h2 className="text-primary text-lg">{title}</h2>
                   <p className="text-sm my-5 sm:-ml-24 sm:bg-base-100 sm:p-5 sm:rounded z-10 text-slate-300">
-                    {description}
+                    {t(description)}
                   </p>
                   <div className="flex text-primary">
                     <Link

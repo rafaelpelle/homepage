@@ -1,3 +1,7 @@
 {
-  "title": "Hi there!"
+  "title": "Projects",
+  "homepage-description": "This page you're currently browsing. It's my personal page, to display some of my work and my experience. I've made a chat to make it feel more interactive.",
+  "routes-description": "Requested by a recruiter as a technical challenge. An app that will allow people to perform searches to know the distance of a route that may consist of 2 or more cities, to enable them to plan their travel.",
+  "checkout-description": "Requested by a recruiter as a technical challenge. An app that let users select between anually or montly membership, fill a payment form, and receive a success/error feedback. Integrated with the company's API.",
+  "github-list-description": "Requested by a recruiter as a technical challenge. An app that will list all users from GitHub, with pagination, and display the user's details when selected."
 }
