@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/rafaelpelle/homepage/compare/v1.17.0...v1.18.0) (2023-08-16)
+
+
+### Features
+
+* i18n projects page ([0b65e59](https://github.com/rafaelpelle/homepage/commit/0b65e59378a0ce83d58a24e0495a11d2529a441b))
+
 # [1.17.0](https://github.com/rafaelpelle/homepage/compare/v1.16.0...v1.17.0) (2023-08-16)
 
 
