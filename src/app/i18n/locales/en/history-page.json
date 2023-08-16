@@ -1,3 +1,12 @@
 {
-  "profile-subtitle": "Front-end web developer specialized in React"
+  "title": "Work History",
+  "amaro-date": "SEP 2021 - Mar 2023",
+  "amaro-job-title": "FRONT-END DEVELOPER",
+  "amaro-job-description": "Working at AMARO I was responsible for maintaining features and create new ones on the company's e-commerce. It was my first time working with design system, micro front-ends, web vitals, data analytics and SEO. Had daily experience with error logging and monitoring. Also had the opportunity to collaborate in a large team of front-end developers with pair programming, code review and mentoring less experience developers",
+  "supero-date": "OCT 2019 - SEP 2021",
+  "supero-job-title": "FRONT-END DEVELOPER",
+  "supero-job-description": "At Supero software factory I've worked with multiple projects for different clients, maintaining legacy code and building projects from scratch. Usually working as the only front-end developer on the project, without code review, but delivering reliable features and fixes.",
+  "getmore-date": "MAY 2018 - OCT 2019",
+  "getmore-job-title": "FRONT-END DEVELOPER",
+  "getmore-job-description": "It was my first internship and then full-time job. I had the opportunity to collaborate not only in software development, but in the business development too, because it was a startup without a well defined product. I was the only front-end developer at my squad and we created a white-label cashback platform from scratch to rent to multiple clients. It was rented to the next bank. I was mentored by a more experienced developer and I saw how important it is. That's why I like to help less experienced developers to improve their skills."
 }

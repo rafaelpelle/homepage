@@ -34,7 +34,7 @@ export default function HistoryPage({ params: { lng } }: HistoryPageProps) {
   return (
     <>
       <div className="h-full w-full p-5 sm:p-0 mx-auto max-w-full sm:max-w-3xl">
-        <h1 className="text-4xl mb-16 font-semibold">Work History</h1>
+        <h1 className="text-4xl mb-16 font-semibold">{t('title')}</h1>
 
         <ul>
           {workHistory.map(
@@ -49,12 +49,14 @@ export default function HistoryPage({ params: { lng } }: HistoryPageProps) {
               >
                 <div className="grid sm:grid-cols-8 sm:gap-8">
                   <p className="whitespace-nowrap sm:col-span-2 mb-3 text-sm text-slate-400">
-                    {period}
+                    {t(period)}
                   </p>
                   <div className="container sm:ml-2 sm:col-span-6">
                     <p>{company}</p>
-                    <p className="text-sm">{jobTitle}</p>
-                    <p className="text-sm my-3 text-slate-400">{description}</p>
+                    <p className="text-sm">{t(jobTitle)}</p>
+                    <p className="text-sm my-3 text-slate-400">
+                      {t(description)}
+                    </p>
                     {stack.map((item) => (
                       <div
                         key={item}
