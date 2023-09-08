@@ -1,6 +1,7 @@
 {
   "title": "Projetos",
   "homepage-description": "Esta página que você está navegando agora. É minha página pessoal, para mostrar um pouco do meu trabalho e da minha experiência. Fiz em forma de chat para ser mais interativo.",
+  "ecommerce-description": "Solicitado por recrutador(a) como desafio técnico. A página inicial de um e-commerce que permita os usuários ver produtos, adicionar produtos no carrinho e remover produtos do carrinho.",
   "routes-description": "Solicitado por recrutador(a) como desafio técnico. Um app que permite que as pessoas façam buscas para saber a distância de uma rota que consiste em duas ou mais cidades, para que possam planejar suas viagens.",
   "checkout-description": "Solicitado por recrutador(a) como desafio técnico. Um app que o usuário possa selecionar entre um plano anual ou mensal, preencher um formulário de pagamento e receba um feedback de sucesso ou erro. Integrado com a API da empresa.",
   "github-list-description": "Solicitado por recrutador(a) como desafio técnico. Um app que lista todos os usuários do GitHub, de forma paginada, e exibe os detalhes do usuário quando selecionado. Integrado com a API do GitHub."

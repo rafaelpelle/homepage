@@ -13,7 +13,21 @@ export const projects: Project[] = [
     githubURL: 'https://github.com/rafaelpelle/homepage',
     liveAtURL: 'https://rafaelpelle.tech/',
     stack: [
-      'React',
+      'Next.js',
+      'Hooks',
+      'TypeScript',
+      'Tailwind CSS',
+      'Testing Library',
+      'Cypress',
+    ],
+  },
+  {
+    title: 'ecommerce-frontend-challenge',
+    description: 'ecommerce-description',
+    githubURL: 'https://github.com/rafaelpelle/ecommerce-frontend-challenge/',
+    liveAtURL: 'https://ecommerce-challenge.rafaelpelle.tech/',
+    stack: [
+      'Next.js',
       'Hooks',
       'TypeScript',
       'Tailwind CSS',
