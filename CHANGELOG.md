@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/rafaelpelle/homepage/compare/v1.19.0...v1.20.0) (2023-09-08)
+
+
+### Features
+
+* add new project to list ([b908128](https://github.com/rafaelpelle/homepage/commit/b90812851ba9af7b1280b23bb859b0a2f6cf9974))
+
 # [1.19.0](https://github.com/rafaelpelle/homepage/compare/v1.18.0...v1.19.0) (2023-08-16)
 
 
