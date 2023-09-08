@@ -1,6 +1,6 @@
 {
   "name": "homepage",
-  "version": "1.20.0",
+  "version": "1.20.1",
   "repositoryUrl": "https://github.com/rafaelpelle/homepage",
   "private": true,
   "scripts": {

@@ -1,3 +1,10 @@
+## [1.20.1](https://github.com/rafaelpelle/homepage/compare/v1.20.0...v1.20.1) (2023-09-08)
+
+
+### Bug Fixes
+
+* mobile menu bg color ([1245bcd](https://github.com/rafaelpelle/homepage/commit/1245bcdf2ff6f9ea97e97cb833ac1f160161ef23))
+
 # [1.20.0](https://github.com/rafaelpelle/homepage/compare/v1.19.0...v1.20.0) (2023-09-08)
 
 
