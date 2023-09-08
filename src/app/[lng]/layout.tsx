@@ -96,7 +96,7 @@ const MobileLayout = async ({ children, params }: RootLayoutProps) => {
 
       <div className="drawer-side z-20">
         <label htmlFor="drawer" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 h-full bg-300 text-base-content">
+        <ul className="menu p-4 w-80 h-full bg-base-300 text-base-content">
           <div className="ml-auto mb-5">
             <I18nDropdown />
           </div>
