@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/rafaelpelle/homepage/compare/v1.20.1...v1.21.0) (2023-11-19)
+
+
+### Features
+
+* new project ([0f938ed](https://github.com/rafaelpelle/homepage/commit/0f938ed25567ea66399c9cd3007d6b9e2f723033))
+
 ## [1.20.1](https://github.com/rafaelpelle/homepage/compare/v1.20.0...v1.20.1) (2023-09-08)
 
 
