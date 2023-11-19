@@ -22,6 +22,13 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: 'meli-frontend-challenge',
+    description: 'meli-description',
+    githubURL: 'https://github.com/rafaelpelle/meli-frontend-challenge/',
+    liveAtURL: 'https://meli-frontend-challenge.rafaelpelle.tech/',
+    stack: ['React', 'Hooks', 'TypeScript', 'Testing Library', 'Cypress'],
+  },
+  {
     title: 'ecommerce-frontend-challenge',
     description: 'ecommerce-description',
     githubURL: 'https://github.com/rafaelpelle/ecommerce-frontend-challenge/',
